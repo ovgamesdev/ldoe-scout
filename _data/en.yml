@@ -1,4 +1,8 @@
 title: "Interactive map LDOE"
+description: "Interactive map for Last Day on Earth (LDOE). Track locations, loot, bosses, and zones."
+keywords: "LDOE, Last Day on Earth, map, Interactive map"
+locale: "en_US"
+locale_alternate: "ru_RU"
 
 ui:
   # Groups

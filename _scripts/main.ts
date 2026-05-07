@@ -13,8 +13,24 @@ declare global {
 			baseurl: string
 			lang: 'en' | 'ru'
 		}
+
+		openImageModal: (src: string) => void;
+
+		// Добавляем поддержку gtag
+		gtag: (command: string, action: string, params?: object) => void;
+		dataLayer: any[];
 	}
 }
+
+const trackEvent = (action: string, category: string, label?: string, value?: number) => {
+	if (typeof window.gtag === 'function') {
+		window.gtag('event', action, {
+			event_category: category,
+			event_label: label,
+			value: value
+		});
+	}
+};
 
 // Расширяем стандартные интерфейсы Leaflet
 declare module 'leaflet' {
@@ -145,6 +161,7 @@ const i18n = window.MAP_DATA.ui
 // 2. ИНИЦИАЛИЗАЦИЯ СОСТОЯНИЯ
 const t = (key: LangKeys) => i18n[key] || key
 
+let isInitialLoad = true;
 let currentMapId = (localStorage.getItem('user_active_map') || 'frozen') as MapKey
 let currentMapSize = MAP_CONFIG[currentMapId]
 
@@ -372,11 +389,13 @@ function getMarkerPopupContent(data: MarkerJSON) {
 
 // Функция для открытия модального окна
 function openImageModal(src: string) {
+	trackEvent('view_loot_image', 'UI Action', src);
 	const modal = document.getElementById('imgModal') as HTMLImageElement
 	const modalImg = document.getElementById('modalImg') as HTMLImageElement
 	modalImg.src = src
 	modal.style.display = 'flex'
 }
+window.openImageModal = openImageModal;
 
 function addMarker(m: MarkerJSON) {
 	const latlng = map.unproject([m.x, m.y], currentMapSize.maxZoom)
@@ -415,6 +434,10 @@ function addMarker(m: MarkerJSON) {
 		}).bindPopup(getMarkerPopupContent(m)).addTo(groups[m.group]!)
 	}
 
+	marker.on('popupopen', () => {
+		trackEvent('view_marker', 'Engagement', m.text);
+	});
+	
 	// Если мы в dev-режиме, вешаем обработчик обновления координат
 	if (isDev) {
 		// Обработка клика для выделения маркера
@@ -493,6 +516,8 @@ async function loadMarkers() {
 		updateMarkersScale() // Применяем нужный размер сразу после загрузки
 	} catch (error) {
 		console.error("Ошибка загрузки маркеров:", error)
+
+		trackEvent('data_load_error', 'Network', `markers_${currentMapId}`);
 	}
 }
 
@@ -525,12 +550,32 @@ async function loadZones() {
 		updateLayersControl()
 	} catch (error) {
 		console.warn("Файл зон не найден или поврежден для этой карты", error)
+
+		trackEvent('data_load_error', 'Network', `zones_${currentMapId}`);
 	}
 }
 
+map.on('overlayadd', function (e) {
+	if (isInitialLoad) return;
+	const groupKey = Object.keys(groups).find(k => e.name.startsWith(t(k as GroupsKeys)));
+	if (groupKey) {
+		trackEvent('filter_enable', 'Filters', groupKey);
+	}
+});
+
+map.on('overlayremove', function (e) {
+	if (isInitialLoad) return;
+	const groupKey = Object.keys(groups).find(k => e.name.startsWith(t(k as GroupsKeys)));
+	if (groupKey) {
+		trackEvent('filter_disable', 'Filters', groupKey);
+	}
+});
+
 map.on('baselayerchange', function (e) {
-	const targetId = Object.keys(MAP_CONFIG).find(k => t(`map_${k as MapKey}`) === e.name) as MapKey
+	const targetId = Object.keys(MAP_CONFIG).find(k => e.name.startsWith(t(`map_${k as MapKey}`))) as MapKey
 	if (targetId && targetId !== currentMapId) {
+		trackEvent('change_map', 'Map Interaction', targetId);
+
 		currentMapId = targetId
 		currentMapSize = MAP_CONFIG[targetId]
 		localStorage.setItem('user_active_map', targetId)
@@ -634,6 +679,7 @@ toggleControls.onAdd = function () {
 		btn.innerHTML = lang.toUpperCase()
 		if (window.MAP_DATA.lang === lang) btn.style.background = '#007bff'
 		btn.onclick = () => {
+			trackEvent('change_language', 'UI Action', lang);
 			const newUrl = `${window.MAP_DATA.url}${window.MAP_DATA.baseurl}/${lang}`;
 			// Выполняем переход
       window.location.href = newUrl;
@@ -645,6 +691,7 @@ toggleControls.onAdd = function () {
 	const hideBtn = L.DomUtil.create('button', 'map-btn', panel)
 	hideBtn.innerHTML = `❌ <span>${t('btn_hide')}</span>`
 	hideBtn.onclick = () => {
+		trackEvent('filters_hide_all', 'UI Action', currentMapId);
 		Object.values(groups).forEach(g => map.removeLayer(g))
 
 		if (map.hasLayer(zonesGroup)) {
@@ -658,6 +705,7 @@ toggleControls.onAdd = function () {
 	const showBtn = L.DomUtil.create('button', 'map-btn', panel)
 	showBtn.innerHTML = `✅ <span>${t('btn_show')}</span>`
 	showBtn.onclick = () => {
+		trackEvent('filters_show_all', 'UI Action', currentMapId);
 		Object.values(groups).forEach(g => map.addLayer(g))
 
 		if (!map.hasLayer(zonesGroup)) {
@@ -711,7 +759,13 @@ toggleControls.onAdd = function () {
 toggleControls.addTo(map)
 
 // Старт
-Promise.all([loadMarkers(), loadZones()]).then(applyFiltersFromURL)
+Promise.all([loadMarkers(), loadZones()]).then(() => {
+	applyFiltersFromURL()
+	isInitialLoad = false;
+	
+	// setTimeout(() => {
+	// }, 0);
+})
 
 
 

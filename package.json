@@ -5,11 +5,13 @@
   "main": "main.js",
   "scripts": {
     "dev:js": "esbuild _scripts/main.ts --bundle --outfile=assets/js/main.js --sourcemap --watch",
+    "dev:css": "esbuild _scripts/main.css --bundle --outfile=assets/css/main.css --sourcemap --watch --external:*.png",
     "dev:jekyll": "bundle exec jekyll serve --watch --incremental",
-    "dev": "concurrently \"npm run dev:js\" \"npm run dev:jekyll\"",
+    "dev": "concurrently \"npm run dev:js\" \"npm run dev:css\" \"npm run dev:jekyll\"",
     "build:js": "esbuild _scripts/main.ts --bundle --outfile=assets/js/main.js --minify",
+    "build:css": "esbuild _scripts/main.css --bundle --outfile=assets/css/main.css --minify --external:*.png",
     "build:jekyll": "bundle exec jekyll build",
-    "build": "npm run build:js && npm run build:jekyll",
+    "build": "npm run build:js && npm run build:css && npm run build:jekyll",
     "deploy": "sh deploy.sh",
     "clean": "bundle exec jekyll clean"
   },

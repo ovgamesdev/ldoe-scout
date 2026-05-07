@@ -1,4 +1,8 @@
 title: "Интерактивная карта LDOE"
+description: "Интерактивная карта Last Day on Earth (LDOE). Отслеживайте местоположения, добычу, боссов и зоны."
+keywords: "LDOE, Last Day on Earth, Карта, Последний день на Земле, интерактивная карта"
+locale: "ru_RU"
+locale_alternate: "en_US"
 
 ui:
   #  Группы
