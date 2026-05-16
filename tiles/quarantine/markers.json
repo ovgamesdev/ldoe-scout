@@ -217,6 +217,12 @@
         "group": "box_pickup"
     },
     {
+        "x": 36365,
+        "y": 14741,
+        "text": "quarantine_box_transport",
+        "group": "box_pickup"
+    },
+    {
         "x": 56132,
         "y": 41357,
         "text": "item_motorcycle",

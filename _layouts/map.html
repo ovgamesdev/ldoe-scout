@@ -44,7 +44,7 @@
 	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
 	<!-- <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" /> -->
-	<link rel="stylesheet" href="{{ site.url }}{{ site.baseurl }}/assets/css/main.css">
+	<link rel="stylesheet" href="{{ site.url }}{{ site.baseurl }}/assets/css/main.css?v={{ site.time | date: '%s' }}">
 
 	<!-- Google tag (gtag.js) -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y2CTVYR0BB"></script>
@@ -70,9 +70,10 @@
 			ui: {{ strings.ui | jsonify }},
 			url: "{{ site.url }}",
 			baseurl: "{{ site.baseurl }}",
-			lang: "{{ page.strings }}"
+			lang: "{{ page.strings }}",
+			buildVer: "{{ site.time | date: '%s' }}"
 		};
 	</script>
-	<script src="{{ site.url }}{{ site.baseurl }}/assets/js/main.js"></script>
+	<script src="{{ site.url }}{{ site.baseurl }}/assets/js/main.js?v={{ site.time | date: '%s' }}"></script>
 </body>
 </html>

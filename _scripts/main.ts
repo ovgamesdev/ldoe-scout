@@ -12,6 +12,7 @@ declare global {
 			url: string
 			baseurl: string
 			lang: 'en' | 'ru'
+			buildVer: string
 		}
 
 		openImageModal: (src: string) => void;
@@ -99,8 +100,8 @@ let selectedMarker: L.Marker | null = null // Глобальная переме�
 const MAP_CONFIG: MapConfig = {
 	frozen: {
 		width: 80682, height: 80682,
-		json: `${window.MAP_DATA.url}${window.MAP_DATA.baseurl}/tiles/frozen/markers.json`,
-		zonesJson: `${window.MAP_DATA.url}${window.MAP_DATA.baseurl}/tiles/frozen/zones.json`,
+		json: `${window.MAP_DATA.url}${window.MAP_DATA.baseurl}/tiles/frozen/markers.json?v=${window.MAP_DATA.buildVer}`,
+		zonesJson: `${window.MAP_DATA.url}${window.MAP_DATA.baseurl}/tiles/frozen/zones.json?v=${window.MAP_DATA.buildVer}`,
 		tilePath: `${window.MAP_DATA.url}${window.MAP_DATA.baseurl}/tiles/frozen/{z}/{y}/{x}.webp`,
 		tileSize: 512,
 		minZoom: 0,
@@ -108,8 +109,8 @@ const MAP_CONFIG: MapConfig = {
 	},
 	quarantine: {
 		width: 74475, height: 71079,
-		json: `${window.MAP_DATA.url}${window.MAP_DATA.baseurl}/tiles/quarantine/markers.json`,
-		zonesJson: `${window.MAP_DATA.url}${window.MAP_DATA.baseurl}/tiles/quarantine/zones.json`,
+		json: `${window.MAP_DATA.url}${window.MAP_DATA.baseurl}/tiles/quarantine/markers.json?v=${window.MAP_DATA.buildVer}`,
+		zonesJson: `${window.MAP_DATA.url}${window.MAP_DATA.baseurl}/tiles/quarantine/zones.json?v=${window.MAP_DATA.buildVer}`,
 		tilePath: `${window.MAP_DATA.url}${window.MAP_DATA.baseurl}/tiles/quarantine/{z}/{y}/{x}.webp`,
 		tileSize: 512,
 		minZoom: 0,
@@ -117,8 +118,8 @@ const MAP_CONFIG: MapConfig = {
 	},
 	greenwood: {
 		width: 72120, height: 72144,
-		json: `${window.MAP_DATA.url}${window.MAP_DATA.baseurl}/tiles/greenwood/markers.json`,
-		zonesJson: `${window.MAP_DATA.url}${window.MAP_DATA.baseurl}/tiles/greenwood/zones.json`,
+		json: `${window.MAP_DATA.url}${window.MAP_DATA.baseurl}/tiles/greenwood/markers.json?v=${window.MAP_DATA.buildVer}`,
+		zonesJson: `${window.MAP_DATA.url}${window.MAP_DATA.baseurl}/tiles/greenwood/zones.json?v=${window.MAP_DATA.buildVer}`,
 		tilePath: `${window.MAP_DATA.url}${window.MAP_DATA.baseurl}/tiles/greenwood/{z}/{y}/{x}.webp`,
 		tileSize: 512,
 		minZoom: 0,
