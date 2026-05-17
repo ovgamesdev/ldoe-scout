@@ -1,0 +1,611 @@
+{
+  "crate_with_oak_logs": {
+    "id": "crate_with_oak_logs",
+    "name_key": "crate_with_oak_logs",
+    "contents": [
+      {
+        "type": "single",
+        "item_key": "oak_log",
+        "count": "106, 135, 138, 142"
+      },
+      {
+        "type": "single",
+        "item_key": "charcoal",
+        "count": "7, 9, 12"
+      },
+      {
+        "type": "single",
+        "item_key": "oak_plank",
+        "count": "0, 6"
+      }
+    ]
+  },
+  "crate_with_fur": {
+    "id": "crate_with_fur",
+    "name_key": "crate_with_fur",
+    "contents": [
+      {
+        "type": "single",
+        "item_key": "fur",
+        "count": "48, 49, 60, 62, 65"
+      },
+      {
+        "type": "single",
+        "item_key": "tanned_fur",
+        "count": "0, 4, 8"
+      }
+    ]
+  },
+  "crate_with_provision_autumn": {
+    "id": "crate_with_provision_autumn",
+    "name_key": "crate_with_provision_autumn",
+    "contents": [
+      {
+        "type": "single",
+        "item_key": "strong_alcohol",
+        "count": "2, 4, 5"
+      },
+      {
+        "type": "single",
+        "item_key": "berry",
+        "count": "34, 40"
+      },
+      {
+        "type": "single",
+        "item_key": "raw_meat",
+        "count": "19-21"
+      },
+      {
+        "type": "single",
+        "item_key": "perch",
+        "count": "14, 19"
+      },
+      {
+        "type": "single",
+        "item_key": "trout",
+        "count": "7-9"
+      },
+      {
+        "type": "single",
+        "item_key": "pike",
+        "count": "6, 8"
+      }
+    ]
+  },
+  "crate_with_provision_summer": {
+    "id": "crate_with_provision_summer",
+    "name_key": "crate_with_provision_summer",
+    "contents": [
+      {
+        "type": "single",
+        "item_key": "raw_turkey",
+        "count": "6, 8"
+      },
+      {
+        "type": "single",
+        "item_key": "berry",
+        "count": "38, 40, 42, 44, 46"
+      },
+      {
+        "type": "single",
+        "item_key": "raw_meat",
+        "count": "17, 21, 22"
+      },
+      {
+        "type": "single",
+        "item_key": "perch",
+        "count": "8-17"
+      },
+      {
+        "type": "single",
+        "item_key": "carp",
+        "count": "5-8"
+      },
+      {
+        "type": "single",
+        "item_key": "pike",
+        "count": "3-8"
+      }
+    ]
+  },
+  "crate_with_provision_winter": {
+    "id": "crate_with_provision_winter",
+    "name_key": "crate_with_provision_winter",
+    "contents": [
+      {
+        "type": "single",
+        "item_key": "strong_alcohol",
+        "count": "8, 9, 11"
+      },
+      {
+        "type": "single",
+        "item_key": "raw_meat",
+        "count": "30, 32"
+      },
+      {
+        "type": "single",
+        "item_key": "northern_berry",
+        "count": "38, 42, 44"
+      },
+      {
+        "type": "single",
+        "item_key": "berry_tincture",
+        "count": "10, 11, 12"
+      },
+      {
+        "type": "single",
+        "item_key": "salmon",
+        "count": "3"
+      },
+      {
+        "type": "single",
+        "item_key": "sturgeon",
+        "count": "9, 10"
+      },
+      {
+        "type": "single",
+        "item_key": "pike",
+        "count": "10, 13"
+      }
+    ]
+  },
+  "crate_with_equipment_autumn": {
+    "id": "crate_with_equipment_autumn",
+    "name_key": "crate_with_equipment_autumn",
+    "contents": [
+      {
+        "type": "group",
+        "pool_count": "1",
+        "items": [
+          {
+            "item_key": "mini_uzi"
+          },
+          {
+            "item_key": "colt_python"
+          },
+          {
+            "item_key": "winchester"
+          }
+        ]
+      },
+      {
+        "type": "group",
+        "pool_count": "1",
+        "items": [
+          {
+            "item_key": "machete"
+          },
+          {
+            "item_key": "katana"
+          },
+          {
+            "item_key": "mini_uzi"
+          },
+          {
+            "item_key": "winchester"
+          }
+        ]
+      },
+      {
+        "type": "group",
+        "pool_count": "1",
+        "items": [
+          {
+            "item_key": "machete"
+          },
+          {
+            "item_key": "katana"
+          },
+          {
+            "item_key": "golf_club"
+          }
+        ]
+      },
+      {
+        "type": "group",
+        "pool_count": "1",
+        "items": [
+          {
+            "item_key": "machete"
+          },
+          {
+            "item_key": "katana"
+          },
+          {
+            "item_key": "mini_uzi"
+          },
+          {
+            "item_key": "m16"
+          }
+        ]
+      },
+      {
+        "type": "group",
+        "pool_count": "1",
+        "items": [
+          {
+            "item_key": "mini_uzi"
+          },
+          {
+            "item_key": "winchester"
+          }
+        ]
+      },
+      {
+        "type": "single",
+        "item_key": "ak_47",
+        "count": "1",
+        "note_key": "rare"
+      },
+      {
+        "type": "group",
+        "pool_count": "0-2",
+        "items": [
+          {
+            "item_key": "reinforced_beanie"
+          },
+          {
+            "item_key": "reinforced_jacket"
+          },
+          {
+            "item_key": "reinforced_jeans"
+          },
+          {
+            "item_key": "reinforced_boots"
+          },
+          {
+            "item_key": "tactical_cap"
+          }
+        ]
+      },
+      {
+        "type": "group",
+        "pool_count": "0-2",
+        "items": [
+          {
+            "item_key": "tactical_cap"
+          },
+          {
+            "item_key": "tactical_body_armor"
+          },
+          {
+            "item_key": "tactical_trousers"
+          },
+          {
+            "item_key": "tactical_boots"
+          }
+        ]
+      }
+    ]
+  },
+  "crate_with_equipment_summer": {
+    "id": "crate_with_equipment_summer",
+    "name_key": "crate_with_equipment_summer",
+    "contents": [
+      {
+        "type": "group",
+        "pool_count": "1",
+        "items": [
+          {
+            "item_key": "machete"
+          },
+          {
+            "item_key": "katana"
+          },
+          {
+            "item_key": "mini_uzi"
+          }
+        ]
+      },
+      {
+        "type": "group",
+        "pool_count": "1",
+        "items": [
+          {
+            "item_key": "glock_17"
+          },
+          {
+            "item_key": "mini_uzi"
+          },
+          {
+            "item_key": "winchester"
+          }
+        ]
+      },
+      {
+        "type": "single",
+        "item_key": "golf_club",
+        "count": "1"
+      },
+      {
+        "type": "group",
+        "pool_count": "1",
+        "items": [
+          {
+            "item_key": "colt_python"
+          },
+          {
+            "item_key": "mini_uzi"
+          },
+          {
+            "item_key": "winchester"
+          }
+        ]
+      },
+      {
+        "type": "single",
+        "item_key": "ak_47",
+        "count": "1",
+        "note_key": "rare"
+      },
+      {
+        "type": "group",
+        "pool_count": "1",
+        "items": [
+          {
+            "item_key": "reinforced_beanie"
+          },
+          {
+            "item_key": "reinforced_jacket"
+          },
+          {
+            "item_key": "reinforced_jeans"
+          },
+          {
+            "item_key": "reinforced_boots"
+          }
+        ]
+      },
+      {
+        "type": "group",
+        "pool_count": "1",
+        "items": [
+          {
+            "item_key": "tactical_cap"
+          },
+          {
+            "item_key": "tactical_body_armor"
+          },
+          {
+            "item_key": "tactical_trousers"
+          },
+          {
+            "item_key": "tactical_boots"
+          }
+        ]
+      }
+    ]
+  },
+  "crate_with_equipment_winter": {
+    "id": "crate_with_equipment_winter",
+    "name_key": "crate_with_equipment_winter",
+    "contents": [
+      {
+        "type": "group",
+        "pool_count": "1",
+        "items": [
+          {
+            "item_key": "flare_gun"
+          },
+          {
+            "item_key": "machete"
+          }
+        ]
+      },
+      {
+        "type": "group",
+        "pool_count": "1",
+        "items": [
+          {
+            "item_key": "colt_python"
+          },
+          {
+            "item_key": "glock_17"
+          },
+          {
+            "item_key": "winchester"
+          },
+          {
+            "item_key": "mini_uzi"
+          }
+        ]
+      },
+      {
+        "type": "group",
+        "pool_count": "1",
+        "items": [
+          {
+            "item_key": "m16"
+          },
+          {
+            "item_key": "ak_47"
+          }
+        ]
+      },
+      {
+        "type": "single",
+        "item_key": "vss_vintorez",
+        "count": "1"
+      },
+      {
+        "type": "single",
+        "item_key": "flare_gun",
+        "count": "1"
+      },
+      {
+        "type": "single",
+        "item_key": "hammer",
+        "count": "1"
+      },
+      {
+        "type": "single",
+        "item_key": "torch",
+        "count": "1"
+      },
+      {
+        "type": "group",
+        "pool_count": "1",
+        "items": [
+          {
+            "item_key": "fur_beanie"
+          },
+          {
+            "item_key": "fur_jacket"
+          },
+          {
+            "item_key": "fur_trousers"
+          },
+          {
+            "item_key": "fur_boots"
+          }
+        ]
+      },
+      {
+        "type": "group",
+        "pool_count": "1",
+        "items": [
+          {
+            "item_key": "tactical_cap"
+          },
+          {
+            "item_key": "tactical_body_armor"
+          },
+          {
+            "item_key": "tactical_trousers"
+          },
+          {
+            "item_key": "tactical_boots"
+          }
+        ]
+      }
+    ]
+  },
+  "crate_with_wool": {
+    "id": "crate_with_wool",
+    "name_key": "crate_with_wool",
+    "contents": [
+      {
+        "type": "single",
+        "item_key": "piece_of_wool",
+        "count": "83, 84, 87, 100, 102, 109"
+      },
+      {
+        "type": "single",
+        "item_key": "woolen_fabric",
+        "count": "0, 6"
+      }
+    ]
+  },
+  "crate_with_copper": {
+    "id": "crate_with_copper",
+    "name_key": "crate_with_copper",
+    "contents": [
+      {
+        "type": "single",
+        "item_key": "copper_ore",
+        "count": "83, 99, 100, 101, 102"
+      },
+      {
+        "type": "single",
+        "item_key": "copper_bar",
+        "count": "1, 2, 3, 4"
+      }
+    ]
+  },
+  "crate_with_aluminum": {
+    "id": "crate_with_aluminum",
+    "name_key": "crate_with_aluminum",
+    "contents": [
+      {
+        "type": "single",
+        "item_key": "bauxite",
+        "count": "113, 144, 145, 178, 180, 181"
+      },
+      {
+        "type": "single",
+        "item_key": "aluminium_bar",
+        "count": "3, 5, 7, 8, 9, 11"
+      }
+    ]
+  },
+  "crate_with_thermite": {
+    "id": "crate_with_thermite",
+    "name_key": "crate_with_thermite",
+    "contents": [
+      {
+        "type": "single",
+        "item_key": "thermite",
+        "count": "16, 17, 18"
+      }
+    ]
+  },
+  "crate_with_pine_logs": {
+    "id": "crate_with_pine_logs",
+    "name_key": "crate_with_pine_logs",
+    "contents": [
+      {
+        "type": "single",
+        "item_key": "pine_log",
+        "count": "215, 265"
+      },
+      {
+        "type": "single",
+        "item_key": "pine_plank",
+        "count": "0, 5"
+      },
+      {
+        "type": "single",
+        "item_key": "charcoal",
+        "count": "7, 9"
+      }
+    ]
+  },
+  "crate_with_stone": {
+    "id": "crate_with_stone",
+    "name_key": "crate_with_stone",
+    "contents": [
+      {
+        "type": "single",
+        "item_key": "limestone",
+        "count": "145-165"
+      }
+    ]
+  },
+  "crate_with_iron": {
+    "id": "crate_with_iron",
+    "name_key": "crate_with_iron",
+    "contents": [
+      {
+        "type": "single",
+        "item_key": "iron_bar",
+        "count": "0, 9"
+      },
+      {
+        "type": "single",
+        "item_key": "iron_ore",
+        "count": "100, 145"
+      },
+      {
+        "type": "single",
+        "item_key": "iron_plate",
+        "count": "0, 1"
+      }
+    ]
+  },
+  "crate_with_hides": {
+    "id": "crate_with_hides",
+    "name_key": "crate_with_hides",
+    "contents": [
+      {
+        "type": "single",
+        "item_key": "leather",
+        "count": "0, 2, 4"
+      },
+      {
+        "type": "single",
+        "item_key": "animal_rawhide",
+        "count": "7, 9, 11, 13"
+      }
+    ]
+  }
+}

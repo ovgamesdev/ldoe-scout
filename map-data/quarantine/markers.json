@@ -1,0 +1,423 @@
+[
+    {
+        "x": 12004,
+        "y": 30087,
+        "text": "transistor_door",
+        "group": "transistor"
+    },
+    {
+        "x": 45182,
+        "y": 46438,
+        "text": "transistor_door",
+        "group": "transistor"
+    },
+    {
+        "x": 48835,
+        "y": 47161,
+        "text": "shelf",
+        "group": "box",
+        "image": "fena_outpost_1.webp"
+    },
+    {
+        "x": 48056,
+        "y": 45800,
+        "text": "shelf",
+        "group": "box",
+        "image": "fena_outpost_2.webp"
+    },
+    {
+        "x": 45294,
+        "y": 45867,
+        "text": "shelf",
+        "group": "box",
+        "image": "fena_outpost_3.webp"
+    },
+    {
+        "x": 57989,
+        "y": 43416,
+        "text": "item_door_transport",
+        "group": "box",
+        "image": "traffic_jam_1.webp"
+    },
+    {
+        "x": 59251,
+        "y": 39982,
+        "text": "item_door_transport_key",
+        "group": "box",
+        "image": "traffic_jam_2.webp"
+    },
+    {
+        "x": 52327,
+        "y": 22803,
+        "text": "item_box",
+        "group": "box",
+        "image": "ritual_zone_1.webp"
+    },
+    {
+        "x": 38114,
+        "y": 26202,
+        "text": "item_box",
+        "group": "box",
+        "image": "quarantine_fishing_1.webp"
+    },
+    {
+        "x": 35905,
+        "y": 26954,
+        "text": "item_box",
+        "group": "box",
+        "image": "quarantine_fishing_2.webp"
+    },
+    {
+        "x": 21573,
+        "y": 43089,
+        "text": "item_box",
+        "group": "box",
+        "image": "crash_site_2.webp"
+    },
+    {
+        "x": 23364,
+        "y": 42302,
+        "text": "item_box",
+        "group": "box",
+        "image": "crash_site_1.webp"
+    },
+    {
+        "x": 15431,
+        "y": 35756,
+        "text": "item_box",
+        "group": "box",
+        "image": "army_base_2.webp"
+    },
+    {
+        "x": 14782,
+        "y": 34124,
+        "text": "item_box",
+        "group": "box",
+        "image": "army_base_1.webp"
+    },
+    {
+        "x": 9011,
+        "y": 35385,
+        "text": "item_box",
+        "group": "box",
+        "image": "army_base_9.webp"
+    },
+    {
+        "x": 9235,
+        "y": 33429,
+        "text": "item_box",
+        "group": "box",
+        "image": "army_base_7.webp"
+    },
+    {
+        "x": 8798,
+        "y": 30782,
+        "text": "item_box",
+        "group": "box",
+        "image": "army_base_6.webp"
+    },
+    {
+        "x": 11082,
+        "y": 31802,
+        "text": "item_box",
+        "group": "box",
+        "image": "army_base_8.webp"
+    },
+    {
+        "x": 11848,
+        "y": 29469,
+        "text": "item_box",
+        "group": "box",
+        "image": "army_base_5.webp"
+    },
+    {
+        "x": 14386,
+        "y": 30650,
+        "text": "item_box",
+        "group": "box",
+        "image": "army_base_4.webp"
+    },
+    {
+        "x": 14551,
+        "y": 29570,
+        "text": "item_box",
+        "group": "box",
+        "image": "army_base_3.webp"
+    },
+    {
+        "x": 37318,
+        "y": 14560,
+        "text": "item_door_transport",
+        "group": "box",
+        "image": "ems_3.webp"
+    },
+    {
+        "x": 37587,
+        "y": 13657,
+        "text": "shelf",
+        "group": "box",
+        "image": "ems_2.webp"
+    },
+    {
+        "x": 35920,
+        "y": 12395,
+        "text": "shelf",
+        "group": "box",
+        "image": "ems_6.webp"
+    },
+    {
+        "x": 35160,
+        "y": 13424,
+        "text": "shelf",
+        "group": "box",
+        "image": "ems_5.webp"
+    },
+    {
+        "x": 36585,
+        "y": 13000,
+        "text": "item_box",
+        "group": "box",
+        "image": "ems_4.webp"
+    },
+    {
+        "x": 34546,
+        "y": 11790,
+        "text": "item_door_transport",
+        "group": "box",
+        "image": "ems_1.webp"
+    },
+    {
+        "x": 48577,
+        "y": 46970,
+        "text": "quarantine_box_transport",
+        "group": "box_pickup",
+        "crates": ["crate_with_provision_autumn", "crate_with_equipment_autumn"]
+    },
+    {
+        "x": 45567,
+        "y": 45846,
+        "text": "quarantine_box_transport_persistent",
+        "group": "box_pickup",
+        "crates": ["crate_with_oak_logs", "crate_with_fur"]
+    },
+    {
+        "x": 57937,
+        "y": 39207,
+        "text": "quarantine_box_transport",
+        "group": "box_pickup",
+        "crates": ["crate_with_provision_autumn", "crate_with_equipment_autumn"]
+    },
+    {
+        "x": 54361,
+        "y": 39046,
+        "text": "quarantine_box_transport_persistent",
+        "group": "box_pickup",
+        "crates": ["crate_with_oak_logs", "crate_with_fur"]
+    },
+    {
+        "x": 8872,
+        "y": 29613,
+        "text": "quarantine_box_transport",
+        "group": "box_pickup",
+        "crates": ["crate_with_provision_autumn", "crate_with_equipment_autumn"]
+    },
+    {
+        "x": 36365,
+        "y": 14741,
+        "text": "quarantine_box_transport",
+        "group": "box_pickup",
+        "crates": ["crate_with_provision_autumn", "crate_with_equipment_autumn"]
+    },
+    {
+        "x": 56132,
+        "y": 41357,
+        "text": "item_motorcycle",
+        "group": "motorcycle",
+        "image": "traffic_jam_4_chopper.webp"
+    },
+    {
+        "x": 56013,
+        "y": 40738,
+        "text": "item_motorcycle",
+        "group": "motorcycle",
+        "image": "traffic_jam_3_chopper.webp"
+    },
+    {
+        "x": 52416,
+        "y": 23267,
+        "text": "boss_leshen",
+        "group": "boss",
+        "icon": "boss_leshen",
+        "image": "boss_leshen.webp"
+    },
+    {
+        "x": 12322,
+        "y": 32158,
+        "text": "boss_screech",
+        "group": "boss",
+        "icon": "boss_screech",
+        "image": "boss_screech.webp"
+    },
+    {
+        "x": 38403,
+        "y": 28902,
+        "text": "fishing_pier",
+        "group": "fishing"
+    },
+    {
+        "x": 37608,
+        "y": 27738,
+        "text": "fishing_pier",
+        "group": "fishing"
+    },
+    {
+        "x": 36548,
+        "y": 28613,
+        "text": "fishing_pier",
+        "group": "fishing"
+    },
+    {
+        "x": 10791,
+        "y": 35969,
+        "text": "c4_door",
+        "group": "c4"
+    },
+    {
+        "x": 11970,
+        "y": 32066,
+        "text": "generator_screech",
+        "group": "generator"
+    },
+    {
+        "x": 14054,
+        "y": 30931,
+        "text": "item_crowbar",
+        "group": "crowbar"
+    },
+    {
+        "x": 38087,
+        "y": 14428,
+        "text": "item_crowbar",
+        "group": "crowbar"
+    },
+    {
+        "x": 35432,
+        "y": 13773,
+        "text": "item_crowbar",
+        "group": "crowbar"
+    },
+    {
+        "x": 38218,
+        "y": 14048,
+        "text": "item_canceling_alarm",
+        "group": "canceling_alarm"
+    },
+    {
+        "x": 35906,
+        "y": 13048,
+        "text": "item_axe",
+        "group": "axe"
+    },
+    {
+        "x": 48527,
+        "y": 66446,
+        "text": "start",
+        "group": "start",
+        "angle": 352
+    },
+    {
+        "x": 41574,
+        "y": 50750,
+        "text": "start",
+        "group": "start",
+        "angle": 45
+    },
+    {
+        "x": 10736,
+        "y": 27272,
+        "text": "start",
+        "group": "start",
+        "angle": 195
+    },
+    {
+        "x": 33913,
+        "y": 25671,
+        "text": "start",
+        "group": "start",
+        "angle": 127
+    },
+    {
+        "x": 39384,
+        "y": 19166,
+        "text": "start",
+        "group": "start",
+        "angle": 312
+    },
+    {
+        "x": 61018,
+        "y": 46292,
+        "text": "start",
+        "group": "start",
+        "angle": 317
+    },
+    {
+        "x": 58349,
+        "y": 42603,
+        "text": "item_corpse_keys",
+        "group": "corpse_keys"
+    },
+    {
+        "x": 58011,
+        "y": 35820,
+        "text": "item_corpse_keys",
+        "group": "corpse_keys"
+    },
+    {
+        "x": 55286,
+        "y": 39526,
+        "text": "item_corpse_keys",
+        "group": "corpse_keys"
+    },
+    {
+        "x": 46525,
+        "y": 44848,
+        "text": "loc_fena_outpost",
+        "group": "location"
+    },
+    {
+        "x": 57753,
+        "y": 36986,
+        "text": "loc_traffic_jam",
+        "group": "location"
+    },
+    {
+        "x": 52172,
+        "y": 21406,
+        "text": "loc_ritual_zone",
+        "group": "location"
+    },
+    {
+        "x": 37279,
+        "y": 25264,
+        "text": "loc_fishing",
+        "group": "location"
+    },
+    {
+        "x": 21903,
+        "y": 40727,
+        "text": "loc_crash_site",
+        "group": "location"
+    },
+    {
+        "x": 12273,
+        "y": 27970,
+        "text": "loc_army_base",
+        "group": "location"
+    },
+    {
+        "x": 34966,
+        "y": 10717,
+        "text": "loc_ems",
+        "group": "location"
+    }
+]

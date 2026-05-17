@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+
+	<title>Интерактивная карта LDOE</title>
+
+	<link rel="shortcut icon" href="https://ovgamesdev.github.io/ldoe-scout/favicon.ico" type="image/x-icon">
+	<link rel="icon" type="image/png" sizes="32x32" href="https://ovgamesdev.github.io/ldoe-scout/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="https://ovgamesdev.github.io/ldoe-scout/favicon-16x16.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="https://ovgamesdev.github.io/ldoe-scout/apple-touch-icon.png">
+	<link rel="manifest" href="https://ovgamesdev.github.io/ldoe-scout/site-ru.webmanifest">
+
+	<meta name="theme-color" content="#ffffff">
+
+	<meta name="description" content="Интерактивная карта Last Day on Earth (LDOE). Отслеживайте местоположения, добычу, боссов и зоны." />
+	<meta name="author" content="ovgamesdev" />
+	<meta name="keywords" content="LDOE, Last Day on Earth, Карта, Последний день на Земле, интерактивная карта" />
+	<link rel="canonical" href="https://ovgamesdev.github.io">
+
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Интерактивная карта LDOE" />
+	<meta property="og:description" content="Интерактивная карта Last Day on Earth (LDOE). Отслеживайте местоположения, добычу, боссов и зоны." />
+	<meta property="og:url" content="https://ovgamesdev.github.io/ldoe-scout/" /> 
+	<meta property="og:image" content="https://ovgamesdev.github.io/ldoe-scout/images/preview.jpg" /> 
+	<meta property="og:site_name" content="Интерактивная карта LDOE" />
+	<meta property="og:locale" content="ru_RU" />
+	<meta property="og:locale:alternate" content="en_US" />
+
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="Интерактивная карта LDOE" />
+	<meta name="twitter:description" content="Интерактивная карта Last Day on Earth (LDOE). Отслеживайте местоположения, добычу, боссов и зоны." />
+	<meta name="twitter:image" content="https://ovgamesdev.github.io/ldoe-scout/images/preview.jpg" />
+
+	<!-- Имя приложения при установке на экран -->
+	<meta name="apple-mobile-web-app-title" content="Интерактивная карта LDOE">
+	<meta name="application-name" content="Интерактивная карта LDOE">
+	<!-- Скрытие элементов интерфейса браузера (режим Standalone) -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="mobile-web-app-capable" content="yes">
+	<!-- Стиль статус-бара на iOS -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+	<!-- <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" /> -->
+	<link rel="stylesheet" href="https://ovgamesdev.github.io/ldoe-scout/assets/css/main.css?v=1779059656">
+
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y2CTVYR0BB"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'G-Y2CTVYR0BB');
+	</script>
+</head>
+<body>
+	<div id="map"></div>
+
+	<div id="imgModal" class="image-modal" onclick="this.style.display='none'">
+		<img id="modalImg" src="" alt="Full view">
+	</div>
+
+	<!-- <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script> -->
+	<script>
+		// Записываем данные в глобальный объект window
+		window.MAP_DATA = {
+			ui: {"start":"🏁 Начальная точка","zombie":"🧟 Зомби","layer_zones":"📍 Области и зоны","boss":"💀 Босс","generator":"⚡ Генератор","radio":"📻 Радио","motorcycle_repair":"🛠️ Ремонт чоппера","gas_pump":"⛽ Бензоколонка","corpse_keys":"💀 Ключ на трупе","crowbar":"🛠️ Нужен лом","axe":"🪓 Нужен железный топор","shovel":"🧹 Нужна лопата","c4":"💣 Нужна взрывчатка C4","transistor":"🔌 Нужен транзистор","campfire":"🔥 Костер","box":"📦 Ящик","box_pickup":"🏋️ Ящик можно поднять","fishing":"🎣 Рыбалка","motorcycle":"🏍️ Чоппер","canceling_alarm":"🔕 Отмена сигнализации","tripwire_trap":"🪤 Растяжка","airdrop":"🪂 Аирдроп","loc_outpost":"Аванпост","loc_tank":"Танк","loc_radio":"Радио","loc_gas_station":"Заброшенная заправка","loc_air_crash":"Вертолет","loc_fishing":"Рыбалка","loc_parking":"Стоянка техники","loc_fena_outpost":"FENA Аванпост","loc_traffic_jam":"Пробка","loc_ritual_zone":"Ритуальная зона","loc_crash_site":"Место крушения","loc_army_base":"Военная база","loc_ems":"Скорая помощь","loc_farm":"Ферма","loc_camp":"Лагерь","loc_parking_lot":"Парковка","loc_trailer_park":"Кемпинг","loc_supermarket":"Супермаркет","item_box":"Ящик","item_box_generator":"Ящик (нужен генератор)","item_door_transport":"Дверь транспорта","item_door_transport_key":"Дверь транспорта (нужен ключ)","item_crowbar":"Запертая дверь","generator_radio":"Генератор для радио","generator_gas":"Генератор для бензоколонки","generator_parking":"Генератор для опускания контейнера краном","item_motorcycle_repair":"Ремонт чоппера","item_radio":"Радио","item_gas_pump":"Бензоколонка","item_corpse_keys":"Ключ на трупе","need_corpse_keys":"Нужен ключ на трупе","item_campfire":"Костер","shelf":"Полка","fishing_pier":"Пирс","item_axe":"Завал","c4_door":"Запертая дверь (C4)","transistor_loader":"Погрузчик (нужен транзистор)","transistor_door":"Закрытая дверь (нужен транзистор)","key_door":"Закрытая дверь (нужен ключ)","loader_box":"Ящик погрузчика","item_motorcycle":"Чоппер","generator_screech":"Генератор для Скрежета","item_canceling_alarm":"Отмена сигнализации","boss_leshen":"Леший","boss_screech":"Скрежет","boss_wendigo":"Вендиго","carrot":"Морковка","item_tripwire_trap":"Растяжка","item_airdrop":"Аирдроп","frozen_box_transport_persistent":"Ящик (нужен транспорт)","frozen_box_transport":"Ящик (нужен транспорт)","quarantine_box_transport_persistent":"Ящик (нужен транспорт)","quarantine_box_transport":"Ящик (нужен транспорт)","greenwood_box_transport_persistent":"Ящик (нужен транспорт)","greenwood_box_transport":"Ящик (нужен транспорт)","elevation":"Возвышенность","zombie_phantom":"Замерзший фантом","zombie_fast_biter":"Замерзший бегун","zombie_giant":"Замерзший гигант","zombie_bloater":"Замерзший толстяк","zombie_boar":"Кабан","animal_north_deer":"Северный олень","zombie_phantom_generator":"Замерзший фантом появляется после запуска генератора","zombie_fast_biter_generator":"Замерзший бегун появляется после запуска генератора","zombie_bloater_generator":"Замерзший толстяк появляется после запуска генератора","zombie_giant_generator":"Замерзший гигант появляется после запуска генератора","zombie_phantom_or_fast_biter":"Замерзший фантом или Замерзший бегун","zombie_phantom_or_bloater":"Замерзший фантом или Замерзший толстяк","zombie_bloater_or_fast_biter":"Замерзший толстяк или Замерзший бегун","zombie_fast_biter_airdrop":"Замерзший бегун появляется на аирдропе","zombie_bloater_airdrop":"Замерзший толстяк появляется на аирдропе","zombie_giant_airdrop":"Замерзший гигант появляется на аирдропе","zombie_phantom_airdrop":"Замерзший фантом появляется на аирдропе","btn_hide":"Скрыть все","btn_show":"Показать все","map_frozen":"Промерзший полигон","map_quarantine":"Карантинная зона","map_greenwood":"Кемпинг-парк Гринвуд","cursor_pos":"Курсор сейчас на: X: {x}, Y: {y}","out_of_map":"Вне карты","loot_example":"Пример лута","one":"Один","of_the_following":"из следующих вариантов","wiki_source":"🌐 Источник: Вики"},
+			crates: {"crate_with_oak_logs":"Ящик с запасами дубовых бревен","oak_log":"Дубовое бревно","charcoal":"Древесный уголь","oak_plank":"Дубовая доска","crate_with_fur":"Ящик с запасами меха","fur":"Мех","tanned_fur":"Дубленый мех","crate_with_provision_autumn":"Ящик с провизией","strong_alcohol":"Крепкий алкоголь","berry":"Ягода","raw_meat":"Сырое мясо","perch":"Окунь","trout":"Форель","pike":"Щука","crate_with_provision_summer":"Ящик с провизией","raw_turkey":"Тушка индейки","carp":"Carp","crate_with_provision_winter":"Ящик с провизией","northern_berry":"Северная ягода","berry_tincture":"Ягодная настойка","salmon":"Лосось","sturgeon":"Осетр","crate_with_equipment_autumn":"Ящик с экипировкой","mini_uzi":"Мини Узи","colt_python":"Colt Python","winchester":"Винчестер","machete":"Мачете","katana":"Катана","golf_club":"Клюшка для гольфа","m16":"M16","ak_47":"AK-47","rare":"Редкий","reinforced_beanie":"Усиленная шапка","reinforced_jacket":"Усиленная куртка","reinforced_jeans":"Усиленные джинсы","reinforced_boots":"Усиленные ботинки","tactical_cap":"Военная кепка","tactical_body_armor":"Военный бронежилет","tactical_trousers":"Военные штаны","tactical_boots":"Военные ботинки","crate_with_equipment_summer":"Ящик с экипировкой","glock_17":"Глок 17","crate_with_equipment_winter":"Ящик с экипировкой","flare_gun":"Ракетница","vss_vintorez":"ВСС Винторез","hammer":"Молоток","torch":"Факел","fur_beanie":"Меховая шапка","fur_jacket":"Меховая куртка","fur_trousers":"Меховые штаны","fur_boots":"Ботинки с мехом","crate_with_wool":"Ящик с запасами шерсти","piece_of_wool":"Кусок шерсти","woolen_fabric":"Шерстяная ткань","crate_with_copper":"Ящик с запасами меди","copper_ore":"Медная руда","copper_bar":"Медный слиток","crate_with_aluminum":"Ящик с запасами алюминия","bauxite":"Алюминиевая руда","aluminium_bar":"Алюминиевый слиток","crate_with_thermite":"Ящик с запасами термита","thermite":"Термитная смесь","crate_with_pine_logs":"Ящик с запасами сосновых бревен","pine_log":"Сосновое бревно","pine_plank":"Сосновая доска","crate_with_stone":"Ящик с запасами камня","limestone":"Известняк","crate_with_iron":"Ящик с запасами железа","iron_bar":"Железный слиток","iron_ore":"Железная руда","iron_plate":"Железная пластина","crate_with_hides":"Ящик с запасами шкур","leather":"Кожа","animal_rawhide":"Шкура животного"},
+			url: "https://ovgamesdev.github.io",
+			baseurl: "/ldoe-scout",
+			lang: "ru",
+			buildVer: "1779059656"
+		};
+	</script>
+	<script src="https://ovgamesdev.github.io/ldoe-scout/assets/js/main.js?v=1779059656"></script>
+</body>
+</html>
