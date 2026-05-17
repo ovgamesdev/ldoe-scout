@@ -3,49 +3,57 @@
         "x": 44788,
         "y": 66148,
         "text": "frozen_box_transport",
-        "group": "box_pickup"
+        "group": "box_pickup",
+        "crates": ["crate_with_provision_winter", "crate_with_equipment_winter"]
     },
     {
         "x": 46726,
         "y": 63658,
         "text": "frozen_box_transport_persistent",
-        "group": "box_pickup"
+        "group": "box_pickup",
+        "crates": ["crate_with_wool", "crate_with_copper", "crate_with_aluminum", "crate_with_thermite"]
     },
     {
         "x": 38750,
         "y": 38294,
         "text": "frozen_box_transport",
-        "group": "box_pickup"
+        "group": "box_pickup",
+        "crates": ["crate_with_provision_winter", "crate_with_equipment_winter"]
     },
     {
         "x": 37613,
         "y": 36711,
         "text": "frozen_box_transport_persistent",
-        "group": "box_pickup"
+        "group": "box_pickup",
+        "crates": ["crate_with_wool", "crate_with_copper", "crate_with_aluminum", "crate_with_thermite"]
     },
     {
         "x": 21975,
         "y": 33452,
         "text": "frozen_box_transport",
-        "group": "box_pickup"
+        "group": "box_pickup",
+        "crates": ["crate_with_provision_winter", "crate_with_equipment_winter"]
     },
     {
         "x": 18761,
         "y": 35143,
         "text": "frozen_box_transport_persistent",
-        "group": "box_pickup"
+        "group": "box_pickup",
+        "crates": ["crate_with_wool", "crate_with_copper", "crate_with_aluminum", "crate_with_thermite"]
     },
     {
         "x": 63598,
         "y": 40226,
         "text": "frozen_box_transport",
-        "group": "box_pickup"
+        "group": "box_pickup",
+        "crates": ["crate_with_provision_winter", "crate_with_equipment_winter"]
     },
     {
         "x": 62573,
         "y": 36264,
         "text": "frozen_box_transport_persistent",
-        "group": "box_pickup"
+        "group": "box_pickup",
+        "crates": ["crate_with_wool", "crate_with_copper", "crate_with_aluminum", "crate_with_thermite"]
     },
     {
         "x": 44372,

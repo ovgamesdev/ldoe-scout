@@ -4,14 +4,15 @@
   "description": "Interactive map project for Last Day on Earth: Survival. This tool is designed for seamless navigation through game locations, tracking resources, bosses, and other key points of interest.",
   "main": "main.js",
   "scripts": {
+    "fandom:fetch": "ts-node -O \"{\\\"module\\\": \\\"commonjs\\\"}\" _dev/parse-fandom.ts",
     "dev:js": "esbuild _scripts/main.ts --bundle --outfile=assets/js/main.js --sourcemap --watch",
     "dev:css": "esbuild _scripts/main.css --bundle --outfile=assets/css/main.css --sourcemap --watch --external:*.png",
     "dev:jekyll": "bundle exec jekyll serve --watch --incremental",
-    "dev": "concurrently \"npm run dev:js\" \"npm run dev:css\" \"npm run dev:jekyll\"",
+    "dev": "npm run fandom:fetch && concurrently \"npm run dev:js\" \"npm run dev:css\" \"npm run dev:jekyll\"",
     "build:js": "esbuild _scripts/main.ts --bundle --outfile=assets/js/main.js --minify",
     "build:css": "esbuild _scripts/main.css --bundle --outfile=assets/css/main.css --minify --external:*.png",
     "build:jekyll": "bundle exec jekyll build",
-    "build": "npm run build:js && npm run build:css && npm run build:jekyll",
+    "build": "npm run fandom:fetch && npm run build:js && npm run build:css && npm run build:jekyll",
     "deploy": "sh deploy.sh",
     "clean": "bundle exec jekyll clean"
   },
@@ -28,12 +29,17 @@
   },
   "homepage": "https://github.com/ovgamesdev/ldoe-scout#readme",
   "devDependencies": {
+    "@types/cheerio": "^0.22.35",
     "@types/leaflet": "^1.9.21",
+    "@types/node": "^25.8.0",
     "concurrently": "^9.2.1",
     "esbuild": "^0.28.0",
+    "ts-node": "^10.9.2",
     "typescript": "^6.0.3"
   },
   "dependencies": {
-    "leaflet": "^1.9.4"
+    "cheerio": "^1.2.0",
+    "leaflet": "^1.9.4",
+    "yaml": "^2.9.0"
   }
 }

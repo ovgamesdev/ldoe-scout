@@ -2,13 +2,15 @@ import * as L from 'leaflet'
 
 type GroupsKeys = 'start' | 'layer_zones' | 'zombie' | 'location' | 'boss' | 'fishing' | 'box' | 'box_pickup' | 'motorcycle' | 'airdrop' | 'c4' | 'axe' | 'crowbar' | 'transistor' | 'shovel' | 'generator' | 'radio' | 'motorcycle_repair' | 'gas_pump' | 'corpse_keys' | 'tripwire_trap' | 'campfire' | 'canceling_alarm';
 type IconKeys = 'start' | 'boss' | 'boss_leshen' | 'boss_screech' | 'boss_wendigo' | 'generator' | 'radio' | 'motorcycle' | 'motorcycle_repair' | 'gas_pump' | 'corpse_keys' | 'crowbar' | 'axe' | 'shovel' | 'c4' | 'transistor' | 'campfire' | 'box' | 'box_pickup' | 'airdrop' | 'fishing' | 'tripwire_trap' | 'canceling_alarm' | 'point' | 'zombie' | 'zombie_phantom' | 'zombie_fast_biter' | 'zombie_giant' | 'zombie_boar' | 'zombie_bloater' | 'animal_north_deer';
-type LangKeys = GroupsKeys | IconKeys |'loc_outpost' | 'loc_tank' | 'loc_radio' | 'loc_gas_station' | 'loc_air_crash' | 'loc_fishing' | 'loc_parking' | 'loc_fena_outpost' | 'loc_traffic_jam' | 'loc_ritual_zone' | 'loc_crash_site' | 'loc_army_base' | 'loc_ems' | 'loc_farm' | 'loc_camp' | 'loc_parking_lot' | 'loc_trailer_park' | 'loc_supermarket' | 'item_box' | 'item_box_transport' | 'item_box_generator' | 'item_door_transport' | 'item_door_transport_key' | 'item_crowbar' | 'generator_radio' | 'generator_gas' | 'generator_parking' | 'item_motorcycle_repair' | 'item_radio' | 'item_gas_pump' | 'item_corpse_keys' | 'need_corpse_keys' | 'item_campfire' | 'shelf' | 'fishing_pier' | 'item_axe' | 'c4_door' | 'transistor_loader' | 'transistor_door' | 'key_door' | 'loader_box' | 'item_motorcycle' | 'generator_screech' | 'item_canceling_alarm' | 'boss_leshen' | 'boss_screech' | 'boss_wendigo' | 'carrot' | 'item_tripwire_trap' | 'item_airdrop' | 'frozen_box_transport_persistent' | 'frozen_box_transport' | 'quarantine_box_transport_persistent' | 'quarantine_box_transport' | 'greenwood_box_transport_persistent' | 'greenwood_box_transport' | 'elevation' | 'zombie_phantom' | 'zombie_fast_biter' | 'zombie_giant' | 'zombie_bloater' | 'zombie_boar' | 'animal_north_deer' | 'zombie_phantom_generator' | 'zombie_fast_biter_generator' | 'zombie_bloater_generator' | 'zombie_giant_generator' | 'zombie_phantom_or_fast_biter' | 'zombie_phantom_or_bloater' | 'zombie_bloater_or_fast_biter' | 'zombie_fast_biter_airdrop' | 'zombie_bloater_airdrop' | 'zombie_giant_airdrop' | 'zombie_phantom_airdrop' | 'btn_hide' | 'btn_show' | 'map_frozen' | 'map_quarantine' | 'map_greenwood' | 'cursor_pos' | 'out_of_map' | 'loot_example';
+type LangKeys = GroupsKeys | IconKeys |'loc_outpost' | 'loc_tank' | 'loc_radio' | 'loc_gas_station' | 'loc_air_crash' | 'loc_fishing' | 'loc_parking' | 'loc_fena_outpost' | 'loc_traffic_jam' | 'loc_ritual_zone' | 'loc_crash_site' | 'loc_army_base' | 'loc_ems' | 'loc_farm' | 'loc_camp' | 'loc_parking_lot' | 'loc_trailer_park' | 'loc_supermarket' | 'item_box' | 'item_box_transport' | 'item_box_generator' | 'item_door_transport' | 'item_door_transport_key' | 'item_crowbar' | 'generator_radio' | 'generator_gas' | 'generator_parking' | 'item_motorcycle_repair' | 'item_radio' | 'item_gas_pump' | 'item_corpse_keys' | 'need_corpse_keys' | 'item_campfire' | 'shelf' | 'fishing_pier' | 'item_axe' | 'c4_door' | 'transistor_loader' | 'transistor_door' | 'key_door' | 'loader_box' | 'item_motorcycle' | 'generator_screech' | 'item_canceling_alarm' | 'boss_leshen' | 'boss_screech' | 'boss_wendigo' | 'carrot' | 'item_tripwire_trap' | 'item_airdrop' | 'frozen_box_transport_persistent' | 'frozen_box_transport' | 'quarantine_box_transport_persistent' | 'quarantine_box_transport' | 'greenwood_box_transport_persistent' | 'greenwood_box_transport' | 'elevation' | 'zombie_phantom' | 'zombie_fast_biter' | 'zombie_giant' | 'zombie_bloater' | 'zombie_boar' | 'animal_north_deer' | 'zombie_phantom_generator' | 'zombie_fast_biter_generator' | 'zombie_bloater_generator' | 'zombie_giant_generator' | 'zombie_phantom_or_fast_biter' | 'zombie_phantom_or_bloater' | 'zombie_bloater_or_fast_biter' | 'zombie_fast_biter_airdrop' | 'zombie_bloater_airdrop' | 'zombie_giant_airdrop' | 'zombie_phantom_airdrop' | 'btn_hide' | 'btn_show' | 'map_frozen' | 'map_quarantine' | 'map_greenwood' | 'cursor_pos' | 'out_of_map' | 'loot_example' | 'one' | 'of_the_following' | 'wiki_source';
+type LangCratesKeys = "crate_with_oak_logs" | "oak_log" | "charcoal" | "oak_plank" | "crate_with_fur" | "fur" | "tanned_fur" | "crate_with_provision_autumn" | "strong_alcohol" | "berry" | "raw_meat" | "perch" | "trout" | "pike" | "crate_with_provision_summer" | "raw_turkey" | "carp" | "crate_with_provision_winter" | "northern_berry" | "berry_tincture" | "salmon" | "sturgeon" | "crate_with_equipment_autumn" | "mini_uzi" | "colt_python" | "winchester" | "machete" | "katana" | "golf_club" | "m16" | "ak_47" | "rare" | "reinforced_beanie" | "reinforced_jacket" | "reinforced_jeans" | "reinforced_boots" | "tactical_cap" | "tactical_body_armor" | "tactical_trousers" | "tactical_boots" | "crate_with_equipment_summer" | "glock_17" | "crate_with_equipment_winter" | "flare_gun" | "vss_vintorez" | "hammer" | "torch" | "fur_beanie" | "fur_jacket" | "fur_trousers" | "fur_boots" | "crate_with_wool" | "piece_of_wool" | "woolen_fabric" | "crate_with_copper" | "copper_ore" | "copper_bar" | "crate_with_aluminum" | "bauxite" | "aluminium_bar" | "crate_with_thermite" | "thermite" | "crate_with_pine_logs" | "pine_log" | "pine_plank" | "crate_with_stone" | "limestone" | "crate_with_iron" | "iron_bar" | "iron_ore" | "iron_plate" | "crate_with_hides" | "leather" | "animal_rawhide";
 
 // Описываем тип для window, чтобы TS не ругался
 declare global {
 	interface Window {
 		MAP_DATA: {
 			ui: {[key in LangKeys]: string}
+			crates: {[key in LangCratesKeys]: string}
 			url: string
 			baseurl: string
 			lang: 'en' | 'ru'
@@ -68,12 +70,43 @@ interface MarkerJSON {
 	image?: string
 	angle?: number
 	icon?: string
+	crates?: string[];
 }
 interface ZonesJSON {
 	name: LangKeys
 	color: string
 	coordinates: [number, number][]
 }
+
+// Типы для ящиков
+export interface CrateItem {
+	item_key: LangCratesKeys;
+}
+
+export interface CrateContentSingle {
+	type: 'single';
+	item_key: LangCratesKeys;
+	count?: string;
+	note_key?: LangCratesKeys;
+}
+
+export interface CrateContentGroup {
+	type: 'group';
+	pool_count: string;
+	items: CrateItem[];
+}
+
+export type CrateContent = CrateContentSingle | CrateContentGroup;
+
+export interface CrateData {
+	id: string;
+	name_key: LangCratesKeys;
+	contents: CrateContent[];
+}
+
+type CratesDataRegistry = { [crateId: string]: CrateData };
+
+// 
 
 type MapKey = 'frozen' | 'quarantine' | 'greenwood'
 
@@ -100,8 +133,8 @@ let selectedMarker: L.Marker | null = null // Глобальная переме�
 const MAP_CONFIG: MapConfig = {
 	frozen: {
 		width: 80682, height: 80682,
-		json: `${window.MAP_DATA.url}${window.MAP_DATA.baseurl}/tiles/frozen/markers.json?v=${window.MAP_DATA.buildVer}`,
-		zonesJson: `${window.MAP_DATA.url}${window.MAP_DATA.baseurl}/tiles/frozen/zones.json?v=${window.MAP_DATA.buildVer}`,
+		json: `${window.MAP_DATA.url}${window.MAP_DATA.baseurl}/map-data/frozen/markers.json?v=${window.MAP_DATA.buildVer}`,
+		zonesJson: `${window.MAP_DATA.url}${window.MAP_DATA.baseurl}/map-data/frozen/zones.json?v=${window.MAP_DATA.buildVer}`,
 		tilePath: `${window.MAP_DATA.url}${window.MAP_DATA.baseurl}/tiles/frozen/{z}/{y}/{x}.webp`,
 		tileSize: 512,
 		minZoom: 0,
@@ -109,8 +142,8 @@ const MAP_CONFIG: MapConfig = {
 	},
 	quarantine: {
 		width: 74475, height: 71079,
-		json: `${window.MAP_DATA.url}${window.MAP_DATA.baseurl}/tiles/quarantine/markers.json?v=${window.MAP_DATA.buildVer}`,
-		zonesJson: `${window.MAP_DATA.url}${window.MAP_DATA.baseurl}/tiles/quarantine/zones.json?v=${window.MAP_DATA.buildVer}`,
+		json: `${window.MAP_DATA.url}${window.MAP_DATA.baseurl}/map-data/quarantine/markers.json?v=${window.MAP_DATA.buildVer}`,
+		zonesJson: `${window.MAP_DATA.url}${window.MAP_DATA.baseurl}/map-data/quarantine/zones.json?v=${window.MAP_DATA.buildVer}`,
 		tilePath: `${window.MAP_DATA.url}${window.MAP_DATA.baseurl}/tiles/quarantine/{z}/{y}/{x}.webp`,
 		tileSize: 512,
 		minZoom: 0,
@@ -118,8 +151,8 @@ const MAP_CONFIG: MapConfig = {
 	},
 	greenwood: {
 		width: 72120, height: 72144,
-		json: `${window.MAP_DATA.url}${window.MAP_DATA.baseurl}/tiles/greenwood/markers.json?v=${window.MAP_DATA.buildVer}`,
-		zonesJson: `${window.MAP_DATA.url}${window.MAP_DATA.baseurl}/tiles/greenwood/zones.json?v=${window.MAP_DATA.buildVer}`,
+		json: `${window.MAP_DATA.url}${window.MAP_DATA.baseurl}/map-data/greenwood/markers.json?v=${window.MAP_DATA.buildVer}`,
+		zonesJson: `${window.MAP_DATA.url}${window.MAP_DATA.baseurl}/map-data/greenwood/zones.json?v=${window.MAP_DATA.buildVer}`,
 		tilePath: `${window.MAP_DATA.url}${window.MAP_DATA.baseurl}/tiles/greenwood/{z}/{y}/{x}.webp`,
 		tileSize: 512,
 		minZoom: 0,
@@ -156,11 +189,18 @@ const groupOrder: {[key in GroupsKeys]: number} = {
 	canceling_alarm: 2000,
 }
 
-// 1. Словарь переводов
-const i18n = window.MAP_DATA.ui
+// ИНИЦИАЛИЗАЦИЯ СОСТОЯНИЯ
+// 1. Описываем сигнатуры (правила) для компилятора
+function t(key: LangCratesKeys, space: 'crates'): string;
+function t(key: LangKeys, space?: 'ui'): string;
 
-// 2. ИНИЦИАЛИЗАЦИЯ СОСТОЯНИЯ
-const t = (key: LangKeys) => i18n[key] || key
+// 2. Пишем единую реализацию
+function t(key: string, space: 'ui' | 'crates' = 'ui'): string {
+    if (space === 'crates') {
+        return window.MAP_DATA.crates[key as LangCratesKeys] || key;
+    }
+    return window.MAP_DATA.ui[key as LangKeys] || key;
+}
 
 let isInitialLoad = true;
 let currentMapId = (localStorage.getItem('user_active_map') || 'frozen') as MapKey
@@ -384,6 +424,78 @@ function getMarkerPopupContent(data: MarkerJSON) {
 		const text = data.image.includes('boss_') ? '' : `<b>${t('loot_example')}</b>`
 		content += `<br><img src="${window.MAP_DATA.url}${window.MAP_DATA.baseurl}/images/loot/${data.image}" onclick="openImageModal(this.src)" style="width: 150px; aspect-ratio: ${data.image.includes('chopper') ? '600/454' : '600/470'}; object-fit: contain; margin-top: 10px; margin-bottom: ${text ? '5px' : ''}; border-radius: 4px; display: block; cursor: zoom-in;">${text}`
 	}
+
+	// --- Логика рендера содержимого ящиков ---
+	if (data.crates && data.crates.length > 0) {
+		content += `<div style="text-align: left; margin-top: 10px; font-size: 13px; line-height: 1.4;">`;
+
+		data.crates.forEach(crateId => {
+			const crate = cratesData[crateId];
+			if (!crate) return;
+
+			// Опционально: если хочешь выводить название ящика перед его списком
+			content += `<div style="margin-top: 8px;"><b>${t(crate.name_key, 'crates')}</b></div>`;
+			
+			content += `<ul style="list-style-type: none; padding-left: 0; margin: 4px 0;">`;
+
+			crate.contents.forEach(item => {
+				if (item.type === 'single') {
+					const countStr = item.count ? (item.count === '1' ? '' :  `: ${item.count} `) : '';
+					
+					// Переводим название и примечание (например, note_key: "rare" -> "(Rare)")
+					const itemName = t(item.item_key, 'crates') || item.item_key;
+					const noteStr = item.note_key ? ` (${t(item.note_key, 'crates')})` : '';
+					
+					content += `<li style="margin-bottom: 2px;">• ${itemName}${noteStr}${countStr}</li>`;
+				} else if (item.type === 'group') {
+					// Обработка группы с пулом
+					const poolText = item.pool_count === '1' ? t('one') : item.pool_count;
+					
+					content += `<li style="margin-bottom: 2px;">• ${poolText} ${t('of_the_following')}:`;
+					content += `<ul style="list-style-type: none; padding-left: 15px; margin: 2px 0;">`;
+
+					item.items.forEach(subItem => {
+						const subItemName = t(subItem.item_key, 'crates') || subItem.item_key;
+						content += `<li>• ${subItemName}</li>`;
+					});
+
+					content += `</ul></li>`;
+				}
+			});
+
+			content += `</ul>`;
+
+			// Преобразуем id ящика (например: crate_with_oak_logs) в формат названия страницы Wiki (Crate_with_Oak_Logs)
+			const pageName = crateId
+				.split('_')
+				.map(word => {
+					// Особые случаи для правильной вложенности круглых скобок, как в вашем массиве PAGES
+					if (word === 'autumn') return '(Autumn)';
+					if (word === 'summer') return '(Summer)';
+					if (word === 'winter') return '(Winter)';
+
+					// Слово 'with' всегда пишем с маленькой буквы
+					if (word === 'with') return 'with';
+
+					// Капитализируем первую букву каждого слова
+					return word.charAt(0).toUpperCase() + word.slice(1);
+				})
+				.join('_');
+
+			const wikiUrl = `https://last-day-on-earth-survival.fandom.com/wiki/${pageName}`;
+			
+			content += `
+				<div style="margin-top: 5px; text-align: right;">
+					<a href="${wikiUrl}" target="_blank" rel="noopener noreferrer" style="font-size: 11px; color: #3498db; text-decoration: none;">
+						${t('wiki_source')}
+					</a>
+				</div>
+			`;
+		});
+
+		content += `</div>`;
+	}
+
 	content += `</div>`
 	return content
 }
@@ -554,6 +666,40 @@ async function loadZones() {
 
 		trackEvent('data_load_error', 'Network', `zones_${currentMapId}`);
 	}
+}
+
+let cratesData: CratesDataRegistry = {};
+
+async function loadCratesData() {
+	// Формируем URL по аналогии с вашим MAP_CONFIG
+	const cratesUrl = `${window.MAP_DATA.url}${window.MAP_DATA.baseurl}/map-data/crates_data.json?v=${window.MAP_DATA.buildVer}`;
+
+	try {
+		const response = await fetch(cratesUrl);
+		if (!response.ok) {
+			throw new Error(`HTTP error! status: ${response.status}`);
+		}
+		cratesData = await response.json();
+		
+		// Вызываем обновление поп-апов для группы box_pickup
+		updateBoxPickupMarkers();
+	} catch (error) {
+		console.error("Ошибка загрузки данных ящиков (crates_data):", error);
+		trackEvent('data_load_error', 'Network', `crates_data`);
+	}
+}
+
+function updateBoxPickupMarkers() {
+	// Проходим по всем слоям, добавленным на карту Leaflet
+	map.eachLayer((layer) => {
+		const marker = layer as L.Marker;
+		if (marker.options.sourceData && marker.options.sourceData.group === 'box_pickup') {
+			// Генерируем новый контент поп-апа с учетом уже загруженных cratesData
+			const newContent = getMarkerPopupContent(marker.options.sourceData);
+			// Перепривязываем поп-ап с новым содержимым
+			marker.bindPopup(newContent);
+		}
+	});
 }
 
 map.on('overlayadd', function (e) {
@@ -760,7 +906,7 @@ toggleControls.onAdd = function () {
 toggleControls.addTo(map)
 
 // Старт
-Promise.all([loadMarkers(), loadZones()]).then(() => {
+Promise.all([loadMarkers(), loadZones(), loadCratesData()]).then(() => {
 	applyFiltersFromURL()
 	isInitialLoad = false;
 	

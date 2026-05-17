@@ -63,11 +63,12 @@
 		<img id="modalImg" src="" alt="Full view">
 	</div>
 
-    <!-- <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script> -->
+	<!-- <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script> -->
 	<script>
 		// Записываем данные в глобальный объект window
 		window.MAP_DATA = {
 			ui: {{ strings.ui | jsonify }},
+			crates: {{ strings.crates | jsonify }},
 			url: "{{ site.url }}",
 			baseurl: "{{ site.baseurl }}",
 			lang: "{{ page.strings }}",

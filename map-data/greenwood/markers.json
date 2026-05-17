@@ -205,49 +205,58 @@
         "x": 37273,
         "y": 53361,
         "text": "greenwood_box_transport_persistent",
-        "group": "box_pickup"
+        "group": "box_pickup",
+        "crates": ["crate_with_pine_logs", "crate_with_stone", "crate_with_iron", "crate_with_hides"]
     },
     {
         "x": 9723,
         "y": 38643,
         "text": "greenwood_box_transport_persistent",
-        "group": "box_pickup"
+        "group": "box_pickup",
+        "crates": ["crate_with_pine_logs", "crate_with_stone", "crate_with_iron", "crate_with_hides"]
     },
     {
         "x": 57558,
         "y": 30279,
         "text": "greenwood_box_transport",
-        "group": "box_pickup"
+        "group": "box_pickup",
+        "crates": ["crate_with_provision_summer", "crate_with_equipment_summer"]
     },
     {
         "x": 63974,
         "y": 32763,
         "text": "greenwood_box_transport_persistent",
-        "group": "box_pickup"
+        "group": "box_pickup",
+        "crates": ["crate_with_pine_logs", "crate_with_stone", "crate_with_iron", "crate_with_hides"]
+        
     },
     {
         "x": 61648,
         "y": 32636,
         "text": "greenwood_box_transport",
-        "group": "box_pickup"
+        "group": "box_pickup",
+        "crates": ["crate_with_provision_summer", "crate_with_equipment_summer"]
     },
     {
         "x": 35424,
         "y": 14048,
         "text": "greenwood_box_transport",
-        "group": "box_pickup"
+        "group": "box_pickup",
+        "crates": ["crate_with_provision_summer", "crate_with_equipment_summer"]
     },
     {
         "x": 32554,
         "y": 11589,
         "text": "greenwood_box_transport_persistent",
-        "group": "box_pickup"
+        "group": "box_pickup",
+        "crates": ["crate_with_pine_logs", "crate_with_stone", "crate_with_iron", "crate_with_hides"]
     },
     {
         "x": 32394,
         "y": 51968,
         "text": "greenwood_box_transport",
-        "group": "box_pickup"
+        "group": "box_pickup",
+        "crates": ["crate_with_provision_summer", "crate_with_equipment_summer"]
     },
     {
         "x": 36245,

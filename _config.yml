@@ -35,8 +35,10 @@ data_dir: _data
 # Build settings
 # theme: minima
 plugins:
-  - jekyll-feed
+#   - jekyll-feed
 
+keep_files:
+  - tiles
 
 # Exclude from processing.
 # The following items will not be processed, by default.
@@ -58,6 +60,7 @@ exclude:
   - package.json
   - deploy.sh
   - .git
+  - tiles
 
   # - vendor/bundle/
   # - vendor/cache/

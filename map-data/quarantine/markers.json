@@ -190,37 +190,43 @@
         "x": 48577,
         "y": 46970,
         "text": "quarantine_box_transport",
-        "group": "box_pickup"
+        "group": "box_pickup",
+        "crates": ["crate_with_provision_autumn", "crate_with_equipment_autumn"]
     },
     {
         "x": 45567,
         "y": 45846,
         "text": "quarantine_box_transport_persistent",
-        "group": "box_pickup"
+        "group": "box_pickup",
+        "crates": ["crate_with_oak_logs", "crate_with_fur"]
     },
     {
         "x": 57937,
         "y": 39207,
         "text": "quarantine_box_transport",
-        "group": "box_pickup"
+        "group": "box_pickup",
+        "crates": ["crate_with_provision_autumn", "crate_with_equipment_autumn"]
     },
     {
         "x": 54361,
         "y": 39046,
         "text": "quarantine_box_transport_persistent",
-        "group": "box_pickup"
+        "group": "box_pickup",
+        "crates": ["crate_with_oak_logs", "crate_with_fur"]
     },
     {
         "x": 8872,
         "y": 29613,
         "text": "quarantine_box_transport",
-        "group": "box_pickup"
+        "group": "box_pickup",
+        "crates": ["crate_with_provision_autumn", "crate_with_equipment_autumn"]
     },
     {
         "x": 36365,
         "y": 14741,
         "text": "quarantine_box_transport",
-        "group": "box_pickup"
+        "group": "box_pickup",
+        "crates": ["crate_with_provision_autumn", "crate_with_equipment_autumn"]
     },
     {
         "x": 56132,
