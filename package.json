@@ -13,7 +13,7 @@
     "build:css": "esbuild _scripts/main.css --bundle --outfile=assets/css/main.css --minify --external:*.png",
     "build:jekyll": "bundle exec jekyll build",
     "build": "npm run fandom:fetch && npm run build:js && npm run build:css && npm run build:jekyll",
-    "deploy": "sh deploy.sh",
+    "deploy": "powershell -ExecutionPolicy Bypass -File ./deploy.ps1",
     "clean": "bundle exec jekyll clean"
   },
   "repository": {

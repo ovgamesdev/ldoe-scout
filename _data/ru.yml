@@ -117,6 +117,7 @@ ui:
   out_of_map: "Вне карты"
   loot_example: "Пример лута"
   one: "Один"
+  none_or_one: "Ничего или один"
   of_the_following: "из следующих вариантов"
   wiki_source: "🌐 Источник: Вики"
 
@@ -137,7 +138,7 @@ crates:
   pike: "Щука"
   crate_with_provision_summer: "Ящик с провизией"
   raw_turkey: "Тушка индейки"
-  carp: "Carp"
+  carp: "Карп"
   crate_with_provision_winter: "Ящик с провизией"
   northern_berry: "Северная ягода"
   berry_tincture: "Ягодная настойка"

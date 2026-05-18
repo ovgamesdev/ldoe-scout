@@ -118,6 +118,7 @@ ui:
   out_of_map: "Outside the map"
   loot_example: "Loot example"
   one: "One"
+  none_or_one: "None or one"
   of_the_following: "of the following"
   wiki_source: "🌐 Wiki Source"
 

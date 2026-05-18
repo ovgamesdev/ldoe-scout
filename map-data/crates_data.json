@@ -340,7 +340,7 @@
       },
       {
         "type": "group",
-        "pool_count": "1",
+        "pool_count": "0-1",
         "items": [
           {
             "item_key": "reinforced_beanie"
@@ -358,7 +358,7 @@
       },
       {
         "type": "group",
-        "pool_count": "1",
+        "pool_count": "0-1",
         "items": [
           {
             "item_key": "tactical_cap"
@@ -372,7 +372,8 @@
           {
             "item_key": "tactical_boots"
           }
-        ]
+        ],
+        "note_key": "rare"
       }
     ]
   },
@@ -412,7 +413,7 @@
       },
       {
         "type": "group",
-        "pool_count": "1",
+        "pool_count": "0-1",
         "items": [
           {
             "item_key": "m16"
@@ -444,7 +445,7 @@
       },
       {
         "type": "group",
-        "pool_count": "1",
+        "pool_count": "0-1",
         "items": [
           {
             "item_key": "fur_beanie"
@@ -462,7 +463,7 @@
       },
       {
         "type": "group",
-        "pool_count": "1",
+        "pool_count": "0-1",
         "items": [
           {
             "item_key": "tactical_cap"

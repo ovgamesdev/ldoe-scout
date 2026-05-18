@@ -61,13 +61,24 @@ async function parsePage(pageName: string) {
                     // ЕСЛИ ЕСТЬ ВЛОЖЕННЫЙ СПИСОК (ГРУППА)
                     if (nestedLis.length > 0) {
                         let poolCount = '';
+                        const lowerParentText = parentText.toLowerCase();
+
                         // Если написано "One of the following:"
-                        if (parentText.toLowerCase().includes('one of')) {
+                        if (lowerParentText.includes('none or one of')) {
+                            poolCount = '0-1'; // Или используйте 'None or one', если хотите видеть текст
+                        } else if (lowerParentText.includes('one of')) {
                             poolCount = '1';
                         } else {
                             // Если написано "0-2 of the following:"
                             const match = parentText.match(/^([\d,\-\s]+)/);
                             poolCount = match?.[1]?.trim() || '';
+                        }
+
+                        // Ищем примечания в скобках для всей группы, например "(Rare)"
+                        let noteName: string | undefined = undefined;
+                        const noteMatch = parentText.match(/\((.*?)\)/);
+                        if (noteMatch && noteMatch[1]) {
+                            noteName = noteMatch[1].trim();
                         }
 
                         const groupItems: { item_key: string }[] = [];
@@ -79,11 +90,21 @@ async function parsePage(pageName: string) {
                             groupItems.push({ item_key: itemKey });
                         });
 
-                        contents.push({
+                        // Формируем объект группы предметов
+                        const groupObj: any = {
                             type: 'group',
                             pool_count: poolCount,
                             items: groupItems
-                        });
+                        };
+
+                        // Если нашли примечание (например, Rare), добавляем его ключ в объект группы
+                        if (noteName) {
+                            const noteKey = toKey(noteName);
+                            groupObj.note_key = noteKey;
+                            englishNames[noteKey] = noteName; // Автоматически запишется в перевод как "rare": "Rare"
+                        }
+
+                        contents.push(groupObj);
                     } 
                     // ЕСЛИ ЭТО ОДИНОЧНЫЙ ПРЕДМЕТ
                     else {
