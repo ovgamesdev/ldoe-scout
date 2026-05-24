@@ -1,0 +1,499 @@
+[
+    {
+        "x": 33614,
+        "y": 54138,
+        "text": "item_door_transport",
+        "group": "box",
+        "image": "farm_1.webp"
+    },
+    {
+        "x": 36469,
+        "y": 53636,
+        "text": "shelf",
+        "group": "box",
+        "image": "farm_2.webp"
+    },
+    {
+        "x": 34537,
+        "y": 50151,
+        "text": "item_box",
+        "group": "box",
+        "image": "farm_4.webp"
+    },
+    {
+        "x": 32663,
+        "y": 51450,
+        "text": "shelf",
+        "group": "box",
+        "image": "farm_5.webp"
+    },
+    {
+        "x": 32151,
+        "y": 51148,
+        "text": "carrot",
+        "group": "box"
+    },
+    {
+        "x": 31470,
+        "y": 50034,
+        "text": "shelf",
+        "group": "box",
+        "image": "farm_6.webp"
+    },
+    {
+        "x": 29670,
+        "y": 39831,
+        "text": "item_box",
+        "group": "box",
+        "image": "camp_1_1.webp"
+    },
+    {
+        "x": 47491,
+        "y": 32473,
+        "text": "item_box",
+        "group": "box",
+        "image": "camp_2_2.webp"
+    },
+    {
+        "x": 46319,
+        "y": 35570,
+        "text": "item_box",
+        "group": "box",
+        "image": "camp_2_1.webp"
+    },
+    {
+        "x": 14979,
+        "y": 40793,
+        "text": "item_box",
+        "group": "box",
+        "image": "parking_lot_1.webp"
+    },
+    {
+        "x": 13487,
+        "y": 38289,
+        "text": "item_box",
+        "group": "box",
+        "image": "parking_lot_2.webp"
+    },
+    {
+        "x": 9995,
+        "y": 39902,
+        "text": "item_box",
+        "group": "box",
+        "image": "parking_lot_3.webp"
+    },
+    {
+        "x": 17079,
+        "y": 29724,
+        "text": "item_box",
+        "group": "box",
+        "image": "greenwood_fishing_2.webp"
+    },
+    {
+        "x": 16791,
+        "y": 30366,
+        "text": "item_box",
+        "group": "box",
+        "image": "greenwood_fishing_1.webp"
+    },
+    {
+        "x": 66376,
+        "y": 32456,
+        "text": "item_box",
+        "group": "box",
+        "image": "trailer_park_4.webp"
+    },
+    {
+        "x": 64742,
+        "y": 31425,
+        "text": "item_box",
+        "group": "box",
+        "image": "trailer_park_3.webp"
+    },
+    {
+        "x": 63001,
+        "y": 32824,
+        "text": "item_box",
+        "group": "box",
+        "image": "trailer_park_2.webp"
+    },
+    {
+        "x": 61408,
+        "y": 33200,
+        "text": "item_box",
+        "group": "box",
+        "image": "trailer_park_1.webp"
+    },
+    {
+        "x": 32215,
+        "y": 16907,
+        "text": "item_door_transport",
+        "group": "box",
+        "image": "supermarket_1.webp"
+    },
+    {
+        "x": 30688,
+        "y": 16308,
+        "text": "item_door_transport",
+        "group": "box",
+        "image": "supermarket_2.webp"
+    },
+    {
+        "x": 30462,
+        "y": 14402,
+        "text": "item_door_transport",
+        "group": "box",
+        "image": "supermarket_3.webp"
+    },
+    {
+        "x": 37627,
+        "y": 14112,
+        "text": "item_box",
+        "group": "box",
+        "image": "supermarket_4.webp"
+    },
+    {
+        "x": 34809,
+        "y": 14131,
+        "text": "shelf",
+        "group": "box",
+        "image": "supermarket_5.webp"
+    },
+    {
+        "x": 34914,
+        "y": 12747,
+        "text": "shelf",
+        "group": "box",
+        "image": "supermarket_6.webp"
+    },
+    {
+        "x": 34963,
+        "y": 12031,
+        "text": "item_box",
+        "group": "box",
+        "image": "supermarket_7.webp"
+    },
+    {
+        "x": 34549,
+        "y": 10220,
+        "text": "item_box",
+        "group": "box",
+        "image": "supermarket_8.webp"
+    },
+    {
+        "x": 33681,
+        "y": 10680,
+        "text": "item_box",
+        "group": "box",
+        "image": "supermarket_10.webp"
+    },
+    {
+        "x": 32938,
+        "y": 11524,
+        "text": "shelf",
+        "group": "box",
+        "image": "supermarket_9.webp"
+    },
+    {
+        "x": 31919,
+        "y": 11719,
+        "text": "shelf",
+        "group": "box",
+        "image": "supermarket_11.webp"
+    },
+    {
+        "x": 37273,
+        "y": 53361,
+        "text": "greenwood_box_transport_persistent",
+        "group": "box_pickup",
+        "crates": ["crate_with_pine_logs", "crate_with_stone", "crate_with_iron", "crate_with_hides"]
+    },
+    {
+        "x": 9723,
+        "y": 38643,
+        "text": "greenwood_box_transport_persistent",
+        "group": "box_pickup",
+        "crates": ["crate_with_pine_logs", "crate_with_stone", "crate_with_iron", "crate_with_hides"]
+    },
+    {
+        "x": 57558,
+        "y": 30279,
+        "text": "greenwood_box_transport",
+        "group": "box_pickup",
+        "crates": ["crate_with_provision_summer", "crate_with_equipment_summer"]
+    },
+    {
+        "x": 63974,
+        "y": 32763,
+        "text": "greenwood_box_transport_persistent",
+        "group": "box_pickup",
+        "crates": ["crate_with_pine_logs", "crate_with_stone", "crate_with_iron", "crate_with_hides"]
+        
+    },
+    {
+        "x": 61648,
+        "y": 32636,
+        "text": "greenwood_box_transport",
+        "group": "box_pickup",
+        "crates": ["crate_with_provision_summer", "crate_with_equipment_summer"]
+    },
+    {
+        "x": 35424,
+        "y": 14048,
+        "text": "greenwood_box_transport",
+        "group": "box_pickup",
+        "crates": ["crate_with_provision_summer", "crate_with_equipment_summer"]
+    },
+    {
+        "x": 32554,
+        "y": 11589,
+        "text": "greenwood_box_transport_persistent",
+        "group": "box_pickup",
+        "crates": ["crate_with_pine_logs", "crate_with_stone", "crate_with_iron", "crate_with_hides"]
+    },
+    {
+        "x": 32394,
+        "y": 51968,
+        "text": "greenwood_box_transport",
+        "group": "box_pickup",
+        "crates": ["crate_with_provision_summer", "crate_with_equipment_summer"]
+    },
+    {
+        "x": 36245,
+        "y": 52570,
+        "text": "item_box",
+        "group": "shovel",
+        "image": "farm_3.webp"
+    },
+    {
+        "x": 30170,
+        "y": 50542,
+        "text": "item_corpse_keys",
+        "group": "corpse_keys"
+    },
+    {
+        "x": 33210,
+        "y": 49873,
+        "text": "item_corpse_keys",
+        "group": "corpse_keys"
+    },
+    {
+        "x": 35835,
+        "y": 51405,
+        "text": "item_corpse_keys",
+        "group": "corpse_keys"
+    },
+    {
+        "x": 35448,
+        "y": 53836,
+        "text": "key_door",
+        "group": "corpse_keys"
+    },
+    {
+        "x": 30808,
+        "y": 50808,
+        "text": "item_axe",
+        "group": "axe"
+    },
+    {
+        "x": 33449,
+        "y": 11757,
+        "text": "item_axe",
+        "group": "axe"
+    },
+    {
+        "x": 15501,
+        "y": 39863,
+        "text": "item_tripwire_trap",
+        "group": "tripwire_trap"
+    },
+    {
+        "x": 10014,
+        "y": 37007,
+        "text": "item_tripwire_trap",
+        "group": "tripwire_trap"
+    },
+    {
+        "x": 62278,
+        "y": 35015,
+        "text": "item_tripwire_trap",
+        "group": "tripwire_trap"
+    },
+    {
+        "x": 63436,
+        "y": 35067,
+        "text": "item_tripwire_trap",
+        "group": "tripwire_trap"
+    },
+    {
+        "x": 66558,
+        "y": 33403,
+        "text": "item_tripwire_trap",
+        "group": "tripwire_trap"
+    },
+    {
+        "x": 63651,
+        "y": 30507,
+        "text": "item_tripwire_trap",
+        "group": "tripwire_trap"
+    },
+    {
+        "x": 9942,
+        "y": 39129,
+        "text": "item_crowbar",
+        "group": "crowbar"
+    },
+    {
+        "x": 62030,
+        "y": 32927,
+        "text": "item_crowbar",
+        "group": "crowbar"
+    },
+    {
+        "x": 36745,
+        "y": 13596,
+        "text": "item_crowbar",
+        "group": "crowbar"
+    },
+    {
+        "x": 12968,
+        "y": 37632,
+        "text": "item_crowbar",
+        "group": "crowbar"
+    },
+    {
+        "x": 17967,
+        "y": 26880,
+        "text": "fishing_pier",
+        "group": "fishing"
+    },
+    {
+        "x": 19023,
+        "y": 27738,
+        "text": "fishing_pier",
+        "group": "fishing"
+    },
+    {
+        "x": 18060,
+        "y": 28726,
+        "text": "fishing_pier",
+        "group": "fishing"
+    },
+    {
+        "x": 59413,
+        "y": 35301,
+        "text": "item_motorcycle",
+        "group": "motorcycle",
+        "image": "trailer_park_5_chopper.webp"
+    },
+    {
+        "x": 59723,
+        "y": 35423,
+        "text": "item_motorcycle",
+        "group": "motorcycle",
+        "image": "trailer_park_5_chopper.webp"
+    },
+    {
+        "x": 60180,
+        "y": 35565,
+        "text": "item_motorcycle",
+        "group": "motorcycle",
+        "image": "trailer_park_5_chopper.webp"
+    },
+    {
+        "x": 65327,
+        "y": 33511,
+        "text": "item_motorcycle",
+        "group": "motorcycle",
+        "image": "trailer_park_5_chopper.webp"
+    },
+    {
+        "x": 65607,
+        "y": 33210,
+        "text": "item_motorcycle",
+        "group": "motorcycle",
+        "image": "trailer_park_5_chopper.webp"
+    },
+    {
+        "x": 42112,
+        "y": 68230,
+        "text": "start",
+        "group": "start",
+        "angle": 5
+    },
+    {
+        "x": 31870,
+        "y": 18642,
+        "text": "start",
+        "group": "start"
+    },
+    {
+        "x": 21073,
+        "y": 30203,
+        "text": "start",
+        "group": "start",
+        "angle": 232
+    },
+    {
+        "x": 16262,
+        "y": 40438,
+        "text": "start",
+        "group": "start",
+        "angle": 186
+    },
+    {
+        "x": 35408,
+        "y": 57300,
+        "text": "start",
+        "group": "start"
+    },
+    {
+        "x": 60528,
+        "y": 32686,
+        "text": "start",
+        "group": "start",
+        "angle": 160
+    },
+    {
+        "x": 31591,
+        "y": 48279,
+        "text": "loc_farm",
+        "group": "location"
+    },
+    {
+        "x": 29477,
+        "y": 38944,
+        "text": "loc_camp",
+        "group": "location"
+    },
+    {
+        "x": 46384,
+        "y": 31903,
+        "text": "loc_camp",
+        "group": "location"
+    },
+    {
+        "x": 11006,
+        "y": 36615,
+        "text": "loc_parking_lot",
+        "group": "location"
+    },
+    {
+        "x": 17849,
+        "y": 26049,
+        "text": "loc_fishing",
+        "group": "location"
+    },
+    {
+        "x": 61480,
+        "y": 29641,
+        "text": "loc_trailer_park",
+        "group": "location"
+    },
+    {
+        "x": 34205,
+        "y": 9331,
+        "text": "loc_supermarket",
+        "group": "location"
+    }
+]
