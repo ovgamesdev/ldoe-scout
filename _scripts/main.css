@@ -1,3 +1,4 @@
+@import "mobile-layout.css";
 @import "leaflet.css";
 @import "style.css";
 
@@ -119,7 +120,7 @@ body {
 .leaflet-popup-content-wrapper, .leaflet-popup-tip {
 	background: rgba(255, 255, 255, 0.9);
 	backdrop-filter: blur(10px);
-	border-radius: 12px;
+	/* border-radius: 12px; */
 	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
@@ -322,32 +323,104 @@ body {
 /*  */
 /*  */
 
-/* По умолчанию (ПК) кнопки зума в углу */
-.leaflet-left .leaflet-control-zoom {
-	margin-left: 10px;
-	margin-top: 10px;
-	transition: all 0.3s ease;
+/* Общие контейнеры для попапов Leaflet */
+.popup-width-sm {
+    width: 191px !important;
 }
 
-/* Режим компактного экрана (Телефон / Маленькое окно) */
-.ui-compact-zoom .leaflet-top.leaflet-left {
-	top: 40% !important;
-	/* Чуть выше центра (50% - центр, 40% - чуть выше) */
-	transform: translateY(-50%);
-	left: unset !important;
-	right: 10px !important;
+.popup-width-md {
+    width: 301px !important;
 }
 
-/* Увеличиваем кнопки для удобства нажатия пальцем на телефоне */
-.ui-compact-zoom .leaflet-control-zoom a {
-	width: 40px !important;
-	height: 40px !important;
-	line-height: 40px !important;
-	font-size: 22px !important;
-	background: rgba(255, 255, 255, 0.9) !important;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+.popup-container-center {
+    text-align: center;
+}
+
+/* Специфика лута во втором попапе (выравнивание по левому краю) */
+.popup-loot-body {
+    text-align: left;
+    margin-top: 10px;
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+/* Заголовки */
+.popup-main-title {
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.popup-section-title {
+    font-weight: 600;
+    margin-top: 8px;
+}
+
+.popup-footer-title {
+    font-weight: 600;
+    font-size: 13px;
+    display: block;
+    margin-top: 5px;
+}
+
+/* Изображения в попапах */
+.popup-image-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.popup-loot-img {
+    width: 150px;
+    aspect-ratio: 600 / 470;
+    object-fit: contain;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    border-radius: 4px;
+    display: block;
+    cursor: zoom-in;
+    transition: opacity 0.2s ease;
+}
+
+.popup-loot-img:hover {
+    opacity: 0.9;
+}
+
+/* Списки с характеристиками */
+.popup-loot-list {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 4px 0;
+}
+
+.popup-loot-list li {
+    margin-bottom: 2px;
+}
+
+/* Блок ссылки на Вики */
+.popup-wiki-wrapper {
+    margin-top: 5px;
+    text-align: right;
+}
+
+.popup-wiki-link {
+    font-size: 11px;
+    color: #3498db;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.popup-wiki-link:hover {
+    color: #2980b9;
+    text-decoration: underline;
+}
+
+/* Вложенный список для пула групповых предметов */
+.popup-loot-sublist {
+    list-style-type: none;
+    padding-left: 15px;
+    margin: 2px 0;
+}
+.popup-loot-sublist li {
+    margin-bottom: 1px;
 }
 
 /*  */

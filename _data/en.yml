@@ -121,6 +121,10 @@ ui:
   none_or_one: "None or one"
   of_the_following: "of the following"
   wiki_source: "🌐 Wiki Source"
+  filters: "Filters"
+  unker_credits: "Specially for the community"
+  success_screenshot_msg: "📸 Great shot! We have automatically copied the interactive link to this map to your clipboard so you can easily share it with friends."
+  fail_screenshot_msg: "📸 Taking a screenshot? Great idea! But don't forget to copy and share the map link too — it's much more convenient."
 
 crates:
   crate_with_oak_logs: "Crate with Oak Logs"
@@ -181,7 +185,7 @@ crates:
   copper_ore: "Copper Ore"
   copper_bar: "Copper Bar"
   crate_with_aluminum: "Crate with Aluminum"
-  bauxite: "Bauxite"
+  aluminum_ore: "Aluminum Ore"
   aluminium_bar: "Aluminium Bar"
   crate_with_thermite: "Crate with Thermite"
   thermite: "Thermite"

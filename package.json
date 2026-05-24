@@ -14,7 +14,8 @@
     "build:jekyll": "bundle exec jekyll build",
     "build": "npm run fandom:fetch && npm run build:js && npm run build:css && npm run build:jekyll",
     "deploy": "powershell -ExecutionPolicy Bypass -File ./deploy.ps1",
-    "clean": "bundle exec jekyll clean"
+    "old:clean": "bundle exec jekyll clean",
+    "clean": "powershell -ExecutionPolicy Bypass -Command \"Remove-Item -Recurse -Force .jekyll-cache, .jekyll-metadata -ErrorAction SilentlyContinue; Get-ChildItem _site -Exclude .git | Remove-Item -Recurse -Force\""
   },
   "repository": {
     "type": "git",

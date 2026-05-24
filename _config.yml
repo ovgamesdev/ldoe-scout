@@ -58,7 +58,8 @@ exclude:
   - tsconfig.json
   - package-lock.json
   - package.json
-  - deploy.sh
+  - deploy.ps1
+  - deplay-test.ps1
   - .git
   - tiles
 

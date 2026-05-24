@@ -2,8 +2,8 @@ import * as L from 'leaflet'
 
 type GroupsKeys = 'start' | 'layer_zones' | 'zombie' | 'location' | 'boss' | 'fishing' | 'box' | 'box_pickup' | 'motorcycle' | 'airdrop' | 'c4' | 'axe' | 'crowbar' | 'transistor' | 'shovel' | 'generator' | 'radio' | 'motorcycle_repair' | 'gas_pump' | 'corpse_keys' | 'tripwire_trap' | 'campfire' | 'canceling_alarm';
 type IconKeys = 'start' | 'boss' | 'boss_leshen' | 'boss_screech' | 'boss_wendigo' | 'generator' | 'radio' | 'motorcycle' | 'motorcycle_repair' | 'gas_pump' | 'corpse_keys' | 'crowbar' | 'axe' | 'shovel' | 'c4' | 'transistor' | 'campfire' | 'box' | 'box_pickup' | 'airdrop' | 'fishing' | 'tripwire_trap' | 'canceling_alarm' | 'point' | 'zombie' | 'zombie_phantom' | 'zombie_fast_biter' | 'zombie_giant' | 'zombie_boar' | 'zombie_bloater' | 'animal_north_deer';
-type LangKeys = GroupsKeys | IconKeys |'loc_outpost' | 'loc_tank' | 'loc_radio' | 'loc_gas_station' | 'loc_air_crash' | 'loc_fishing' | 'loc_parking' | 'loc_fena_outpost' | 'loc_traffic_jam' | 'loc_ritual_zone' | 'loc_crash_site' | 'loc_army_base' | 'loc_ems' | 'loc_farm' | 'loc_camp' | 'loc_parking_lot' | 'loc_trailer_park' | 'loc_supermarket' | 'item_box' | 'item_box_transport' | 'item_box_generator' | 'item_door_transport' | 'item_door_transport_key' | 'item_crowbar' | 'generator_radio' | 'generator_gas' | 'generator_parking' | 'item_motorcycle_repair' | 'item_radio' | 'item_gas_pump' | 'item_corpse_keys' | 'need_corpse_keys' | 'item_campfire' | 'shelf' | 'fishing_pier' | 'item_axe' | 'c4_door' | 'transistor_loader' | 'transistor_door' | 'key_door' | 'loader_box' | 'item_motorcycle' | 'generator_screech' | 'item_canceling_alarm' | 'boss_leshen' | 'boss_screech' | 'boss_wendigo' | 'carrot' | 'item_tripwire_trap' | 'item_airdrop' | 'frozen_box_transport_persistent' | 'frozen_box_transport' | 'quarantine_box_transport_persistent' | 'quarantine_box_transport' | 'greenwood_box_transport_persistent' | 'greenwood_box_transport' | 'elevation' | 'zombie_phantom' | 'zombie_fast_biter' | 'zombie_giant' | 'zombie_bloater' | 'zombie_boar' | 'animal_north_deer' | 'zombie_phantom_generator' | 'zombie_fast_biter_generator' | 'zombie_bloater_generator' | 'zombie_giant_generator' | 'zombie_phantom_or_fast_biter' | 'zombie_phantom_or_bloater' | 'zombie_bloater_or_fast_biter' | 'zombie_fast_biter_airdrop' | 'zombie_bloater_airdrop' | 'zombie_giant_airdrop' | 'zombie_phantom_airdrop' | 'btn_hide' | 'btn_show' | 'map_frozen' | 'map_quarantine' | 'map_greenwood' | 'cursor_pos' | 'out_of_map' | 'loot_example' | 'one' | 'none_or_one' | 'of_the_following' | 'wiki_source';
-type LangCratesKeys = "crate_with_oak_logs" | "oak_log" | "charcoal" | "oak_plank" | "crate_with_fur" | "fur" | "tanned_fur" | "crate_with_provision_autumn" | "strong_alcohol" | "berry" | "raw_meat" | "perch" | "trout" | "pike" | "crate_with_provision_summer" | "raw_turkey" | "carp" | "crate_with_provision_winter" | "northern_berry" | "berry_tincture" | "salmon" | "sturgeon" | "crate_with_equipment_autumn" | "mini_uzi" | "colt_python" | "winchester" | "machete" | "katana" | "golf_club" | "m16" | "ak_47" | "rare" | "reinforced_beanie" | "reinforced_jacket" | "reinforced_jeans" | "reinforced_boots" | "tactical_cap" | "tactical_body_armor" | "tactical_trousers" | "tactical_boots" | "crate_with_equipment_summer" | "glock_17" | "crate_with_equipment_winter" | "flare_gun" | "vss_vintorez" | "hammer" | "torch" | "fur_beanie" | "fur_jacket" | "fur_trousers" | "fur_boots" | "crate_with_wool" | "piece_of_wool" | "woolen_fabric" | "crate_with_copper" | "copper_ore" | "copper_bar" | "crate_with_aluminum" | "bauxite" | "aluminium_bar" | "crate_with_thermite" | "thermite" | "crate_with_pine_logs" | "pine_log" | "pine_plank" | "crate_with_stone" | "limestone" | "crate_with_iron" | "iron_bar" | "iron_ore" | "iron_plate" | "crate_with_hides" | "leather" | "animal_rawhide";
+type LangKeys = GroupsKeys | IconKeys |'loc_outpost' | 'loc_tank' | 'loc_radio' | 'loc_gas_station' | 'loc_air_crash' | 'loc_fishing' | 'loc_parking' | 'loc_fena_outpost' | 'loc_traffic_jam' | 'loc_ritual_zone' | 'loc_crash_site' | 'loc_army_base' | 'loc_ems' | 'loc_farm' | 'loc_camp' | 'loc_parking_lot' | 'loc_trailer_park' | 'loc_supermarket' | 'item_box' | 'item_box_transport' | 'item_box_generator' | 'item_door_transport' | 'item_door_transport_key' | 'item_crowbar' | 'generator_radio' | 'generator_gas' | 'generator_parking' | 'item_motorcycle_repair' | 'item_radio' | 'item_gas_pump' | 'item_corpse_keys' | 'need_corpse_keys' | 'item_campfire' | 'shelf' | 'fishing_pier' | 'item_axe' | 'c4_door' | 'transistor_loader' | 'transistor_door' | 'key_door' | 'loader_box' | 'item_motorcycle' | 'generator_screech' | 'item_canceling_alarm' | 'boss_leshen' | 'boss_screech' | 'boss_wendigo' | 'carrot' | 'item_tripwire_trap' | 'item_airdrop' | 'frozen_box_transport_persistent' | 'frozen_box_transport' | 'quarantine_box_transport_persistent' | 'quarantine_box_transport' | 'greenwood_box_transport_persistent' | 'greenwood_box_transport' | 'elevation' | 'zombie_phantom' | 'zombie_fast_biter' | 'zombie_giant' | 'zombie_bloater' | 'zombie_boar' | 'animal_north_deer' | 'zombie_phantom_generator' | 'zombie_fast_biter_generator' | 'zombie_bloater_generator' | 'zombie_giant_generator' | 'zombie_phantom_or_fast_biter' | 'zombie_phantom_or_bloater' | 'zombie_bloater_or_fast_biter' | 'zombie_fast_biter_airdrop' | 'zombie_bloater_airdrop' | 'zombie_giant_airdrop' | 'zombie_phantom_airdrop' | 'btn_hide' | 'btn_show' | 'map_frozen' | 'map_quarantine' | 'map_greenwood' | 'cursor_pos' | 'out_of_map' | 'loot_example' | 'one' | 'none_or_one' | 'of_the_following' | 'wiki_source' | 'unker_credits' | 'success_screenshot_msg' | 'fail_screenshot_msg' | 'filters';
+type LangCratesKeys = "crate_with_oak_logs" | "oak_log" | "charcoal" | "oak_plank" | "crate_with_fur" | "fur" | "tanned_fur" | "crate_with_provision_autumn" | "strong_alcohol" | "berry" | "raw_meat" | "perch" | "trout" | "pike" | "crate_with_provision_summer" | "raw_turkey" | "carp" | "crate_with_provision_winter" | "northern_berry" | "berry_tincture" | "salmon" | "sturgeon" | "crate_with_equipment_autumn" | "mini_uzi" | "colt_python" | "winchester" | "machete" | "katana" | "golf_club" | "m16" | "ak_47" | "rare" | "reinforced_beanie" | "reinforced_jacket" | "reinforced_jeans" | "reinforced_boots" | "tactical_cap" | "tactical_body_armor" | "tactical_trousers" | "tactical_boots" | "crate_with_equipment_summer" | "glock_17" | "crate_with_equipment_winter" | "flare_gun" | "vss_vintorez" | "hammer" | "torch" | "fur_beanie" | "fur_jacket" | "fur_trousers" | "fur_boots" | "crate_with_wool" | "piece_of_wool" | "woolen_fabric" | "crate_with_copper" | "copper_ore" | "copper_bar" | "crate_with_aluminum" | "aluminum_ore" | "aluminium_bar" | "crate_with_thermite" | "thermite" | "crate_with_pine_logs" | "pine_log" | "pine_plank" | "crate_with_stone" | "limestone" | "crate_with_iron" | "iron_bar" | "iron_ore" | "iron_plate" | "crate_with_hides" | "leather" | "animal_rawhide";
 
 // Описываем тип для window, чтобы TS не ругался
 declare global {
@@ -127,7 +127,13 @@ type MapConfig = {
 }
 
 
-export const isDev = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
+const urlParams = new URLSearchParams(window.location.search);
+const devParam = urlParams.get('dev');
+const isLocal = ['localhost', '127.0.0.1', '::1'].includes(window.location.hostname);
+
+// Режим разработки включен, если явно передано ?dev=1 
+// ИЛИ если мы на локалхосте, но при этом нет явного запрета ?dev=0
+const isDev = devParam === '1' || (isLocal && devParam !== '0');
 let selectedMarker: L.Marker | null = null // Глобальная переменная для выделенного маркера в Dev режиме
 
 // 1. КОНФИГУРАЦИЯ И СЛОВАРИ
@@ -204,14 +210,12 @@ function t(key: string, space: 'ui' | 'crates' = 'ui'): string {
 }
 
 let isInitialLoad = true;
-let currentMapId = (localStorage.getItem('user_active_map') || 'frozen') as MapKey
+let currentMapId: MapKey = (localStorage.getItem('user_active_map') || 'frozen') as MapKey
 let currentMapSize = MAP_CONFIG[currentMapId]
 
 // --- ЛОГИКА URL ПАРАМЕТРОВ ---
 
 // 1. Получаем данные из URL при старте
-const urlParams = new URLSearchParams(window.location.search)
-
 const currentMapName = urlParams.get('map')
 if (currentMapName && currentMapName in MAP_CONFIG) {
 	currentMapId = currentMapName as MapKey
@@ -220,25 +224,21 @@ if (currentMapName && currentMapName in MAP_CONFIG) {
 
 // 2. Функция для обновления URL при действиях пользователя
 function updateURL() {
-	const params = new URLSearchParams()
-
-	// Сохраняем имя карты
-	params.set('map', currentMapId)
+	const urlParams = new URLSearchParams(window.location.search);
 
 	// Сохраняем активные фильтры
-	const activeFilters: string[] = []
-	Object.keys(groups).forEach((key) => {
-		if (map.hasLayer(groups[key as GroupsKeys]!)) {
-			activeFilters.push(key)
-		}
-	})
-	if (activeFilters.length > 0) {
-		params.set('filters', activeFilters.join(','))
-	}
+	const activeFilters = Object.keys(groups).filter(key => {
+		const group = groups[key as GroupsKeys];
+		return group && map.hasLayer(group);
+	});
+	
+	// Обновляем только параметры карты и фильтров
+	urlParams.set('map', currentMapId)
+	urlParams.set('filters', activeFilters.join(','));
 
-	// Обновляем строку браузера без перезагрузки страницы
-	const newRelativePathQuery = window.location.pathname + '?' + params.toString()
-	window.history.pushState(null, '', newRelativePathQuery)
+	// Формируем новый URL и пушим в историю без перезагрузки страницы
+	const newUrl = `${window.location.pathname}?${urlParams.toString()}`;
+	window.history.replaceState({ path: newUrl }, '', newUrl);
 }
 
 // 3. Применяем фильтры из URL (вызывать ПОСЛЕ loadMarkers)
@@ -419,25 +419,37 @@ function openMarkerProperties(marker: L.Marker) {
 }
 
 function getMarkerPopupContent(data: MarkerJSON) {
-	let content = `<div style="text-align: center;"><b>${t(data.text)}</b>`
+	let content = `<div class="popup-container-center"><b class="popup-main-title">${t(data.text)}</b>`
 
 	if (data.image) {
-		const text = data.image.includes('boss_') ? '' : `<b>${t('loot_example')}</b>`
-		content += `<br><img src="${window.MAP_DATA.url}${window.MAP_DATA.baseurl}/images/loot/${data.image}" onclick="openImageModal(this.src)" style="width: 150px; aspect-ratio: ${data.image.includes('chopper') ? '600/454' : '600/470'}; object-fit: contain; margin-top: 10px; margin-bottom: ${text ? '5px' : ''}; border-radius: 4px; display: block; cursor: zoom-in;">${text}`
+		const isBoss = data.image.includes('boss_');
+    const text = isBoss ? '' : `<b class="popup-footer-title">${t('loot_example')}</b>`;
+    const aspect = data.image.includes('chopper') ? '600/454' : '600/470';
+
+		content += `
+      <div class="popup-image-wrapper">
+        <img src="${window.MAP_DATA.url}${window.MAP_DATA.baseurl}/images/loot/${data.image}" 
+					onclick="openImageModal(this.src)" 
+					class="popup-loot-img" 
+					style="aspect-ratio: ${aspect};" 
+					alt="Loot">
+      </div>
+      ${text}
+    `;
 	}
 
 	// --- Логика рендера содержимого ящиков ---
 	if (data.crates && data.crates.length > 0) {
-		content += `<div style="text-align: left; margin-top: 10px; font-size: 13px; line-height: 1.4;">`;
+		content += `<div class="popup-loot-body">`;
 
 		data.crates.forEach(crateId => {
 			const crate = cratesData[crateId];
 			if (!crate) return;
 
 			// Опционально: если хочешь выводить название ящика перед его списком
-			content += `<div style="margin-top: 8px;"><b>${t(crate.name_key, 'crates')}</b></div>`;
+			content += `<div class="popup-section-title"><b>${t(crate.name_key, 'crates')}</b></div>`;
 			
-			content += `<ul style="list-style-type: none; padding-left: 0; margin: 4px 0;">`;
+			content += `<ul class="popup-loot-list">`;
 
 			crate.contents.forEach(item => {
 				if (item.type === 'single') {
@@ -447,7 +459,7 @@ function getMarkerPopupContent(data: MarkerJSON) {
 					const itemName = t(item.item_key, 'crates') || item.item_key;
 					const noteStr = item.note_key ? ` (${t(item.note_key, 'crates')})` : '';
 					
-					content += `<li style="margin-bottom: 2px;">• ${itemName}${noteStr}${countStr}</li>`;
+					content += `<li>• ${itemName}${noteStr}${countStr}</li>`;
 				} else if (item.type === 'group') {
 					// Обработка группы с пулом
 					const poolText = item.pool_count === '1' ? t('one') : item.pool_count === '0-1' ? t('none_or_one') : item.pool_count;
@@ -455,8 +467,8 @@ function getMarkerPopupContent(data: MarkerJSON) {
 					// Получаем примечание (например, " (Редкое)" или " (Rare)")
 					const noteStr = item.note_key ? ` (${t(item.note_key, 'crates')})` : '';
 					
-					content += `<li style="margin-bottom: 2px;">• ${poolText} ${t('of_the_following')}${noteStr}:`;
-					content += `<ul style="list-style-type: none; padding-left: 15px; margin: 2px 0;">`;
+					content += `<li>• ${poolText} ${t('of_the_following')}${noteStr}:`;
+					content += `<ul class="popup-loot-sublist">`;
 
 					item.items.forEach(subItem => {
 						const subItemName = t(subItem.item_key, 'crates') || subItem.item_key;
@@ -489,8 +501,8 @@ function getMarkerPopupContent(data: MarkerJSON) {
 			const wikiUrl = `https://last-day-on-earth-survival.fandom.com/wiki/${pageName}`;
 			
 			content += `
-				<div style="margin-top: 5px; text-align: right;">
-					<a href="${wikiUrl}" target="_blank" rel="noopener noreferrer" style="font-size: 11px; color: #3498db; text-decoration: none;">
+				<div class="popup-wiki-wrapper">
+					<a href="${wikiUrl}" target="_blank" rel="noopener noreferrer" class="popup-wiki-link">
 						${t('wiki_source')}
 					</a>
 				</div>
@@ -607,6 +619,11 @@ function updateLayersControl() {
 			}
 
 			overlayMaps[label] = _groups[key as GroupsKeys]!
+			
+			const mobileLabelSpan = document.querySelector(`.mobile-filter-text[data-group="${key}"]`) as HTMLElement;
+      if (mobileLabelSpan) {
+				mobileLabelSpan.innerText = ` ${label}`; // Добавляем пробел перед иконкой для красоты
+      }
 		})
 
 	layersControl = L.control.layers(baseLayers, overlayMaps, { collapsed: false }).addTo(map)
@@ -831,10 +848,8 @@ toggleControls.onAdd = function () {
 		if (window.MAP_DATA.lang === lang) btn.style.background = '#007bff'
 		btn.onclick = () => {
 			trackEvent('change_language', 'UI Action', lang);
-			const newUrl = `${window.MAP_DATA.url}${window.MAP_DATA.baseurl}/${lang}`;
-			// Выполняем переход
-      window.location.href = newUrl;
-			// location.reload()
+			const urlParams = new URLSearchParams(window.location.search);
+			window.location.href = `${window.MAP_DATA.url}${window.MAP_DATA.baseurl}/ru/?${urlParams.toString()}`;
 		}
 	})
 
@@ -867,18 +882,21 @@ toggleControls.onAdd = function () {
 		updateURL()
 	}
 
-	// 2. Создаем кнопку-шестеренку (только для мобильных)
-	const toggleBtn = L.DomUtil.create('div', 'settings-toggle', wrapper)
-	toggleBtn.innerHTML = '⚙️'
-
-	// Логика открытия/закрытия
-	toggleBtn.onclick = function (e) {
-		const target = e.currentTarget as HTMLElement;
-		L.DomEvent.stopPropagation(e)
-		panel.classList.toggle('active')
-		target.style.transform = panel.classList.contains('active') ? 'rotate(45deg)' : 'rotate(0deg)'
-		target.style.transition = '0.3s'
-	}
+	const unkerCredits = L.DomUtil.create('div', 'unker-credits', panel);
+	unkerCredits.style.marginTop = '10px';
+	unkerCredits.style.paddingTop = '5px';
+	unkerCredits.style.borderTop = '1px solid #ddd'; // Тонкая полоска-разделитель
+	unkerCredits.style.textAlign = 'center';
+	unkerCredits.style.fontSize = '12px';
+	unkerCredits.style.color = '#555555';
+	unkerCredits.style.lineHeight = '1.5';
+	
+	unkerCredits.innerHTML = `
+		${t('unker_credits')}<br>
+		<a href="https://www.youtube.com/@UNKER...1" target="_blank" style="color: #E62117; font-weight: bold; text-decoration: none; font-size: 14px; display: inline-block; margin-top: 5px;">
+			📺 YouTube — UNKER
+		</a>
+	`;
 
 	// Детектор размера окна (ResizeObserver)
 	const ro = new ResizeObserver(entries => {
@@ -909,15 +927,377 @@ toggleControls.onAdd = function () {
 
 toggleControls.addTo(map)
 
+
+// --- СОЗДАНИЕ МОБИЛЬНОГО ИНТЕРФЕЙСА ---
+// Выносим логику отрисовки фильтров в общую функцию
+function renderFilters(container: HTMLElement) {
+    // 1. Очищаем контейнер от кнопок старой карты
+    container.innerHTML = '';
+
+    // 2. Получаем список фильтров, доступных именно для ТЕКУЩЕЙ карты
+    const _groups = { ...groups };
+
+    // Генерируем элементы строго по порядку groupOrder, как и в основном меню
+    Object.keys(_groups)
+      .sort((a, b) => (groupOrder[a as GroupsKeys] || 9999999) - (groupOrder[b as GroupsKeys] || 9999999))
+			.forEach(key => {
+				const label = L.DomUtil.create('label', 'marker-item', container);
+				const cb = L.DomUtil.create('input', '', label) as HTMLInputElement;
+				cb.type = 'checkbox';
+				cb.dataset.group = key;
+				
+				const textSpan = L.DomUtil.create('span', 'mobile-filter-text', label);
+				textSpan.dataset.group = key;
+				textSpan.innerText = ` ${t(key as GroupsKeys)}`;
+
+				// Логика включения/выключения конкретного фильтра
+				cb.onchange = (e) => {
+					const checked = (e.target as HTMLInputElement).checked;
+					const group = groups[key as GroupsKeys];
+					if (group) {
+						if (checked) map.addLayer(group);
+						else map.removeLayer(group);
+						updateLayersControl(); // Обновляем и десктопное меню
+						updateURL();
+					}
+				};
+			});
+}
+
+function initMobileUI() {
+    // Проверка, чтобы не создавать элементы дважды
+    if (document.querySelector('.mobile-header')) return;
+
+    // 1. Хэдер (Выбор карты и Язык)
+    const mobileHeader = L.DomUtil.create('div', 'mobile-header', document.body);
+
+    const mapSelector = L.DomUtil.create('div', 'map-selector', mobileHeader);
+    const mapBtn = L.DomUtil.create('button', '', mapSelector);
+    mapBtn.id = 'mobile-map-btn';
+    // Название карты берем из словаря
+    mapBtn.innerHTML = `🗺️ <span id="mobile-map-title">${t(`map_${currentMapId as MapKey}`)}</span> ▾`;
+
+		const mapDropdown = L.DomUtil.create('div', 'map-dropdown-menu', mapSelector);
+
+    // Массив ваших карт. t('map_...') автоматически подтянет локализацию из словаря
+    const availableMaps = [
+			{ id: 'frozen', label: t('map_frozen' as any) || 'Frozen Island' },
+			{ id: 'quarantine', label: t('map_quarantine' as any) || 'Quarantine Zone' },
+			{ id: 'greenwood', label: t('map_greenwood' as any) || 'Greenwood' }
+    ];
+
+    availableMaps.forEach(mapItem => {
+			const link = L.DomUtil.create('a', 'map-dropdown-item', mapDropdown) as HTMLAnchorElement;
+			
+			// Сохраняем текущие параметры (например, dev=0), но обновляем ID карты
+			const urlParams = new URLSearchParams(window.location.search);
+			urlParams.set('map', mapItem.id);
+			// Фильтры старой карты лучше удалить, так как на новой карте наборы маркеров другие
+			urlParams.delete('filters'); 
+
+			link.href = `${window.MAP_DATA.url}/ldoe-scout/${window.MAP_DATA.lang}/?${urlParams.toString()}`;
+			link.innerText = mapItem.label;
+
+			// Подсвечиваем текущую активную карту, если мы на ней
+			if (currentMapId === mapItem.id) {
+				link.classList.add('active');
+			}
+
+      link.onclick = (e) => {
+        const targetSite = `${window.MAP_DATA.url}/ldoe-scout`;
+        
+        // Проверяем, запущен ли сайт на проде ldoe-scout или локально на localhost для тестов
+        if (window.location.href.includes(targetSite) || window.location.pathname.includes('/ldoe-scout') || window.location.hostname === 'localhost') {
+          e.preventDefault(); // Отменяем жесткую перезагрузку страницы
+
+          // Если кликнули на уже активную карту — просто закрываем шторку меню
+          if (currentMapId === mapItem.id) {
+            mapDropdown.classList.remove('open');
+            return;
+          }
+
+					// Запоминаем ID предыдущей карты, чтобы корректно удалить её слой тайлов
+          const previousMapId = currentMapId;
+
+          // 1. Обновляем глобальный ID текущей карты
+          currentMapId = mapItem.id as MapKey;
+					currentMapSize = MAP_CONFIG[currentMapId];
+					localStorage.setItem('user_active_map', currentMapId);
+
+          // 2. Переключаем активный класс подсветки в меню
+          mapDropdown.querySelectorAll('.map-dropdown-item').forEach(el => el.classList.remove('active'));
+          link.classList.add('active');
+
+          // 3. Меняем текст на главной мобильной кнопке хэдера
+          const titleSpan = document.getElementById('mobile-map-title');
+          if (titleSpan) {
+            titleSpan.innerText = mapItem.label;
+          }
+
+          // 4. Закрываем выпадающий список
+          mapDropdown.classList.remove('open');
+
+          // 5. Бесшовно обновляем URL в браузере (сохраняя dev=0/1, но удаляя старые фильтры)
+          const nextParams = new URLSearchParams(window.location.search);
+          nextParams.set('map', currentMapId);
+          nextParams.delete('filters'); 
+          const newUrl = `${window.location.pathname}?${nextParams.toString()}`;
+          window.history.replaceState({ path: newUrl }, '', newUrl);
+
+          // 6. Стираем с карты старые группы слоев (как вы и просили)
+          Object.values(groups).forEach(g => {
+            if (g) map.removeLayer(g);
+          });
+
+          // 7. Меняем базовый слой тайлов (картинку подложки)
+          const oldLayerName = t(`map_${previousMapId}` as any);
+          const newLayerName = t(`map_${currentMapId}` as any);
+          
+          if (baseLayers[oldLayerName]) map.removeLayer(baseLayers[oldLayerName]);
+          if (baseLayers[newLayerName]) map.addLayer(baseLayers[newLayerName]);
+
+          // 8. Пересчитываем и устанавливаем новые границы карты (Bounds)
+          const bounds = getMapBounds(currentMapSize);
+          map.setMaxBounds(bounds);
+          map.fitBounds(bounds);
+
+					// 9. Перерисовываем кнопки в шторке под новую карту
+          // Передаем туда ваш DOM-элемент `grid` (контейнер фильтров)
+					
+          // 10. Запускаем отрисовку новых точек и зон (они увидят новые активные фильтры)
+          // loadMarkers();
+          // loadZones();
+					
+					Promise.all([loadMarkers(), loadZones(), loadCratesData()]).then(() => {
+						if (grid) {
+							renderFilters(grid);
+						}
+							
+						// initMobileUI();
+					})
+
+        }
+      };
+    });
+
+    // Логика открытия/закрытия меню по клику на кнопку
+    mapBtn.onclick = (e) => {
+			e.stopPropagation(); // Предотвращаем закрытие в этот же миг
+			mapDropdown.classList.toggle('open');
+    };
+
+    // Закрываем меню, если кликнули в любое другое место экрана
+    document.addEventListener('click', () => {
+			mapDropdown.classList.remove('open');
+    });
+
+    const langSelector = L.DomUtil.create('div', 'lang-selector', mobileHeader);
+    const langRu = L.DomUtil.create('span', 'lang-tab' + (window.MAP_DATA.lang === 'ru' ? ' active' : ''), langSelector);
+    langRu.innerText = 'RU';
+    langSelector.appendChild(document.createTextNode(' / '));
+    const langEn = L.DomUtil.create('span', 'lang-tab' + (window.MAP_DATA.lang === 'en' ? ' active' : ''), langSelector);
+    langEn.innerText = 'EN';
+
+    // Логика переключения языков с сохранением фильтров и параметров
+    langRu.onclick = () => {
+			const urlParams = new URLSearchParams(window.location.search);
+			window.location.href = `${window.MAP_DATA.url}${window.MAP_DATA.baseurl}/ru/?${urlParams.toString()}`;
+    };
+
+    langEn.onclick = () => {
+			const urlParams = new URLSearchParams(window.location.search);
+			window.location.href = `${window.MAP_DATA.url}${window.MAP_DATA.baseurl}/en/?${urlParams.toString()}`;
+    };
+
+    // 2. Плавающая кнопка фильтров (FAB)
+    const fabBtn = L.DomUtil.create('button', 'fab-filter-btn', document.body);
+    fabBtn.innerHTML = `🔍 <span>${t('filters')}</span>`;
+
+    // 3. Нижняя шторка (Bottom Sheet)
+    const bottomSheet = L.DomUtil.create('div', 'bottom-sheet', document.body);
+    const backdrop = L.DomUtil.create('div', 'bottom-sheet-backdrop', bottomSheet);
+    const content = L.DomUtil.create('div', 'bottom-sheet-content', bottomSheet);
+    
+    L.DomUtil.create('div', 'bottom-sheet-drag-handle', content);
+
+    const header = L.DomUtil.create('div', 'bottom-sheet-header', content);
+    const title = L.DomUtil.create('h3', '', header);
+    title.innerText = t('filters');
+
+    const quickActions = L.DomUtil.create('div', 'quick-actions', header);
+    const btnShow = L.DomUtil.create('button', 'btn-text', quickActions);
+    btnShow.innerText = t('btn_show');
+    const btnHide = L.DomUtil.create('button', 'btn-text', quickActions);
+    btnHide.innerText = t('btn_hide');
+
+    // 4. Сетка с маркерами
+    const grid = L.DomUtil.create('div', 'markers-grid', content);
+    renderFilters(grid);
+
+    // 5. Подвал шторки
+    const footer = L.DomUtil.create('div', 'bottom-sheet-footer', content);
+    // const btnReset = L.DomUtil.create('button', 'btn-danger', footer);
+    // btnReset.innerText = `⚠️ ${t('reset_all')}`;
+
+    const links = L.DomUtil.create('div', 'footer-links', footer);
+    links.innerHTML = `
+			<a href="https://www.youtube.com/@UNKER...1" target="_blank">🌐 ${t('unker_credits')}</a>
+    `;
+
+    // --- ЛОГИКА РАБОТЫ И АНИМАЦИИ ---
+
+    fabBtn.onclick = () => {
+			bottomSheet.classList.add('open');
+			// Блокируем карту, чтобы при скролле фильтров она не уезжала
+			if (map) map.dragging.disable();
+			
+			// Синхронизируем чекбоксы со слоями на карте перед открытием шторки
+			Object.keys(groups).forEach(key => {
+				const cb = grid.querySelector(`input[data-group="${key}"]`) as HTMLInputElement;
+				const group = groups[key as GroupsKeys];
+				if (cb && group) {
+					cb.checked = map.hasLayer(group);
+				}
+			});
+
+			updateLayersControl();
+    };
+
+    backdrop.onclick = () => {
+			bottomSheet.classList.remove('open');
+			if (map) map.dragging.enable();
+    };
+
+    // Привязываем кнопки к вашим уже существующим функциям
+    btnShow.onclick = () => {
+			trackEvent('filters_show_all', 'UI Action', currentMapId);
+			Object.values(groups).forEach(g => map.addLayer(g));
+			if (!map.hasLayer(zonesGroup)) map.addLayer(zonesGroup);
+			updateLayersControl();
+			updateURL();
+			// Включаем все чекбоксы
+			grid.querySelectorAll('input[type="checkbox"]').forEach(cb => (cb as HTMLInputElement).checked = true);
+    };
+
+    btnHide.onclick = () => {
+			trackEvent('filters_hide_all', 'UI Action', currentMapId);
+			Object.values(groups).forEach(g => map.removeLayer(g));
+			if (map.hasLayer(zonesGroup)) map.removeLayer(zonesGroup);
+			updateLayersControl();
+			updateURL();
+			// Выключаем все чекбоксы
+			grid.querySelectorAll('input[type="checkbox"]').forEach(cb => (cb as HTMLInputElement).checked = false);
+    };
+
+    // btnReset.onclick = () => {
+		// 	trackEvent('reset_all_boxes', 'UI Action', currentMapId);
+		// 	if (confirm(t('confirm_reset_all'))) {
+		// 		markerStatuses.clear();
+		// 		saveMarkerStatuses();
+		// 		updateMarkersScale();
+		// 		updateLayersControl();
+		// 		map.closePopup();
+		// 		bottomSheet.classList.remove('open'); // Закрываем шторку после сброса
+		// 		if (map) map.dragging.enable();
+		// 	}
+    // };
+
+		// --- ЛОГИКА СВАЙПА (DRAG TO DISMISS) ---
+    let startY = 0;
+    let currentDeltaY = 0;
+    let isDragging = false;
+
+    content.addEventListener('touchstart', (e: TouchEvent) => {
+			// Если пользователь скроллит саму сетку фильтров вниз (она не в самом верху), 
+			// то мы даем ему скроллить контент, а не тянуть шторку.
+			if (grid.scrollTop > 0) return; 
+
+			startY = e.touches?.[0]?.clientY ?? 0;
+			isDragging = true;
+			
+			// Отключаем CSS-анимацию, чтобы шторка моментально прилипла к пальцу
+			content.style.transition = 'none';
+    }, { passive: true });
+
+    content.addEventListener('touchmove', (e: TouchEvent) => {
+			if (!isDragging) return;
+			
+			const currentY = e.touches?.[0]?.clientY ?? 0;
+			currentDeltaY = currentY - startY;
+
+			// Позволяем тянуть шторку только вниз
+			if (currentDeltaY > 0) {
+				// Предотвращаем стандартный скролл страницы браузером, пока тянем шторку
+				if (e.cancelable) e.preventDefault(); 
+				
+				// Двигаем шторку за пальцем
+				content.style.transform = `translateY(${currentDeltaY}px)`;
+			}
+    }, { passive: false }); // Важно: passive: false позволяет использовать preventDefault()
+
+    content.addEventListener('touchend', () => {
+			if (!isDragging) return;
+			isDragging = false;
+
+			// Включаем CSS-анимации обратно
+			content.style.transition = '';
+
+			// Если пользователь протянул шторку вниз больше чем на 100 пикселей — закрываем её
+			if (currentDeltaY > 100) {
+				bottomSheet.classList.remove('open');
+				if (map) map.dragging.enable();
+			}
+			
+			// Убираем ручной сдвиг, чтобы CSS-классы (скрыто/открыто) снова управляли позицией
+			content.style.transform = '';
+			currentDeltaY = 0;
+    });
+}
+
+
 // Старт
 Promise.all([loadMarkers(), loadZones(), loadCratesData()]).then(() => {
 	applyFiltersFromURL()
 	isInitialLoad = false;
 	
-	// setTimeout(() => {
-	// }, 0);
+	initMobileUI();
 })
 
+
+// --- ПЕРЕХВАТ СКРИНШОТОВ И АВТО-КОПИРОВАНИЕ ССЫЛКИ ---
+
+function handleScreenshotAttempt() {
+	const currentUrl = window.location.href;
+
+	navigator.clipboard.writeText(currentUrl)
+		.then(() => {
+			setTimeout(() => alert(t('success_screenshot_msg')), 300);
+		})
+		.catch(() => {
+			setTimeout(() => alert(t('fail_screenshot_msg')), 300);
+		});
+}
+
+function checkScreenshotKeys(e: KeyboardEvent) {
+	const key = e.key.toLowerCase();
+	
+	// Одиночный PrintScreen
+	const isPrintScreen = key === 'printscreen';
+	
+	// Windows: Win + Shift + S (в браузерах клавиша Win считывается как metaKey)
+	const isSnippingTool = (e.shiftKey && e.metaKey && (key === 's' || key === 'ы'));
+	
+	// macOS: Cmd + Shift + 3 / 4 / 5
+	const isMacScreenshot = (e.shiftKey && e.metaKey && ['3', '4', '5'].includes(key));
+
+	if (isPrintScreen || isSnippingTool || isMacScreenshot) {
+		handleScreenshotAttempt();
+	}
+}
+
+// Навешиваем слушатели на объект window
+window.addEventListener('keydown', checkScreenshotKeys);
+window.addEventListener('keyup', checkScreenshotKeys);
 
 
 // --- ИНСТРУМЕНТ РАЗРАБОТЧИКА: РИСОВАНИЕ ЗОН (POLYGON) ---
