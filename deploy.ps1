@@ -1,4 +1,4 @@
-# Изменяем кодировку вывода на UTF-8, чтобы кириллица в консоли отображалась корректно
+﻿# Изменяем кодировку вывода на UTF-8, чтобы кириллица в консоли отображалась корректно
 $OutputEncoding = [System.Text.Encoding]::UTF8
 
 # 1. Сборка проекта
@@ -81,5 +81,6 @@ if (Test-Path "_site\tiles") {
 Write-Host "--- Восстановление локальной символической ссылки... ---" -ForegroundColor Cyan
 # Путь внутри ссылки из папки _site должен вести на уровень вверх к реальной папке tiles
 New-Item -ItemType SymbolicLink -Path "_site\tiles" -Value "..\tiles" | Out-Null
+# New-Item -ItemType SymbolicLink -Path "D:\User\Documents\ruby\ldoe-scout\_site\tiles" -Target "D:\User\Documents\ruby\ldoe-scout\tiles"
 
 Write-Host "--- Деплой успешно завершен! ---" -ForegroundColor Green

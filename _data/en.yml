@@ -70,6 +70,7 @@ ui:
   c4_door: "Locked Door (C4)"
   transistor_loader: "Loader (transistor required)"
   transistor_door: "Closed door (transistor required)"
+  transistor_door_mb: "Closed door (may require a transistor)"
   key_door: "Closed door (key required)"
   loader_box: "Loader Box"
   item_motorcycle: "Chopper"

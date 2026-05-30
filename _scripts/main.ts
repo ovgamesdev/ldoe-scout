@@ -275,6 +275,27 @@ const getMapBounds = (config: IMapConfig) => new L.LatLngBounds(
 	map.unproject([config.width, 0], config.maxZoom)
 )
 
+function updateMapBounds() {
+	if (!currentMapSize) return;
+	
+	const bounds = getMapBounds(currentMapSize);
+	const minZoom = currentMapSize.minZoom || 0;
+	const currentZoom = map.getZoom();
+	
+	if (currentZoom === undefined) return;
+
+	const basePadding = 0.8;
+	
+	// Разница между текущим и минимальным зумом
+	const zoomDiff = Math.max(0, currentZoom - minZoom); 
+	
+	// Делим базовый отступ на 2 за каждый шаг зума, 
+	// чтобы визуальный размер отступа на экране всегда был одинаковым
+	const dynamicPadding = basePadding / Math.pow(2, zoomDiff);
+	
+	map.setMaxBounds(bounds.pad(dynamicPadding));
+}
+
 const baseLayers: L.Control.LayersObject = {}
 for (const [id, config] of Object.entries(MAP_CONFIG)) {
 	const layerName = t(`map_${id as MapKey}`)
@@ -290,13 +311,14 @@ for (const [id, config] of Object.entries(MAP_CONFIG)) {
 	if (id === currentMapId) {
 		baseLayers[layerName].addTo(map)
 		const bounds = getMapBounds(config)
-		map.setMaxBounds(bounds)
 
 		if (savedCenter && savedZoom && !Number.isNaN(savedZoom)) {
 			map.setView(savedCenter, savedZoom)
 		} else {
 			map.fitBounds(bounds)
 		}
+
+		updateMapBounds()
 	}
 }
 
@@ -749,8 +771,8 @@ map.on('baselayerchange', function (e) {
 		localStorage.setItem('user_active_map', targetId)
 
 		const bounds = getMapBounds(currentMapSize)
-		map.setMaxBounds(bounds)
 		map.fitBounds(bounds)
+		updateMapBounds()
 
 		loadMarkers()
 		loadZones()
@@ -789,7 +811,11 @@ function updateMarkersScale() {
 		}
 	})
 }
-map.on('zoomend', updateMarkersScale)
+
+map.on('zoomend', () => {
+	updateMarkersScale()
+	updateMapBounds()
+})
 
 // 7. UI ЭЛЕМЕНТЫ
 

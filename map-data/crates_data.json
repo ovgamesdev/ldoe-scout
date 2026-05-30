@@ -125,7 +125,7 @@
       {
         "type": "single",
         "item_key": "northern_berry",
-        "count": "38, 42, 44"
+        "count": "36, 38, 42, 44"
       },
       {
         "type": "single",
@@ -605,7 +605,7 @@
       {
         "type": "single",
         "item_key": "animal_rawhide",
-        "count": "7, 9, 11, 13"
+        "count": "7, 9, 10, 11, 13"
       }
     ]
   }
