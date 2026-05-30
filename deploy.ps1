@@ -69,18 +69,22 @@ if ($LASTEXITCODE -ne 0 -and (Test-Path ".git\MERGE_HEAD")) {
 Write-Host "--- Отправка на GitHub (ветка gh-pages)... ---" -ForegroundColor Cyan
 git push origin gh-pages # --force
 
-# 6. Возврат в корень проекта
-Set-Location ..
-
 # Удаляем физическую папку, чтобы заменить её на ссылку
-if (Test-Path "_site\tiles") {
-    Remove-Item -Recurse -Force "_site\tiles"
+if (Test-Path "tiles") {
+    Remove-Item -Recurse -Force "tiles"
 }
 
-# Восстанавливаем вашу исходную символическую ссылку для локальной работы
 Write-Host "--- Восстановление локальной символической ссылки... ---" -ForegroundColor Cyan
-# Путь внутри ссылки из папки _site должен вести на уровень вверх к реальной папке tiles
-New-Item -ItemType SymbolicLink -Path "_site\tiles" -Value "..\tiles" | Out-Null
+
+# Получаем абсолютный путь к папке tiles, которая лежит на уровень выше
+$targetPath = Resolve-Path "..\tiles"
+
+# Создаем Junction, передавая ему точный полный путь
+New-Item -ItemType Junction -Path "tiles" -Value $targetPath | Out-Null
+# Восстанавливаем вашу исходную символическую ссылку для локальной работы
 # New-Item -ItemType SymbolicLink -Path "D:\User\Documents\ruby\ldoe-scout\_site\tiles" -Target "D:\User\Documents\ruby\ldoe-scout\tiles"
+
+# 6. Возврат в корень проекта
+Set-Location ..
 
 Write-Host "--- Деплой успешно завершен! ---" -ForegroundColor Green
