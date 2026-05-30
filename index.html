@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+
+	<title>Interactive map LDOE</title>
+
+	<link rel="shortcut icon" href="https://ovgamesdev.github.io/ldoe-scout/favicon.ico" type="image/x-icon">
+	<link rel="icon" type="image/png" sizes="32x32" href="https://ovgamesdev.github.io/ldoe-scout/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="https://ovgamesdev.github.io/ldoe-scout/favicon-16x16.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="https://ovgamesdev.github.io/ldoe-scout/apple-touch-icon.png">
+	<link rel="manifest" href="https://ovgamesdev.github.io/ldoe-scout/site-en.webmanifest">
+
+	<meta name="theme-color" content="#ffffff">
+
+	<meta name="description" content="Interactive map for Last Day on Earth (LDOE). Track locations, loot, bosses, and zones." />
+	<meta name="author" content="ovgamesdev" />
+	<meta name="keywords" content="LDOE, Last Day on Earth, map, Interactive map" />
+	<link rel="canonical" href="https://ovgamesdev.github.io">
+
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Interactive map LDOE" />
+	<meta property="og:description" content="Interactive map for Last Day on Earth (LDOE). Track locations, loot, bosses, and zones." />
+	<meta property="og:url" content="https://ovgamesdev.github.io/ldoe-scout/" /> 
+	<meta property="og:image" content="https://ovgamesdev.github.io/ldoe-scout/images/preview.jpg" /> 
+	<meta property="og:site_name" content="Interactive map LDOE" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:locale:alternate" content="ru_RU" />
+
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="Interactive map LDOE" />
+	<meta name="twitter:description" content="Interactive map for Last Day on Earth (LDOE). Track locations, loot, bosses, and zones." />
+	<meta name="twitter:image" content="https://ovgamesdev.github.io/ldoe-scout/images/preview.jpg" />
+
+	<!-- Имя приложения при установке на экран -->
+	<meta name="apple-mobile-web-app-title" content="Interactive map LDOE">
+	<meta name="application-name" content="Interactive map LDOE">
+	<!-- Скрытие элементов интерфейса браузера (режим Standalone) -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="mobile-web-app-capable" content="yes">
+	<!-- Стиль статус-бара на iOS -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+	<!-- <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" /> -->
+	<link rel="stylesheet" href="https://ovgamesdev.github.io/ldoe-scout/assets/css/main.css?v=1780105311">
+
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y2CTVYR0BB"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'G-Y2CTVYR0BB');
+	</script>
+</head>
+<body>
+	<div id="map"></div>
+
+	<div id="imgModal" class="image-modal" onclick="this.style.display='none'">
+		<img id="modalImg" src="" alt="Full view">
+	</div>
+
+	<!-- <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script> -->
+	<script>
+		// Записываем данные в глобальный объект window
+		window.MAP_DATA = {
+			ui: {"start":"🏁 Starting Point","zombie":"🧟 Zombie","layer_zones":"📍 Areas & Zones","boss":"💀 Boss","generator":"⚡ Generator","radio":"📻 Radio","motorcycle_repair":"🛠️ Chopper repair","gas_pump":"⛽ Gas Pump","corpse_keys":"💀 Key on Corpse","crowbar":"🛠️ Needs Crowbar","axe":"🪓 Needs Iron Axe","shovel":"🧹 Needs Shovel","c4":"💣 Needs C4","transistor":"🔌 Needs Transistor","campfire":"🔥 Campfire","box":"📦 Box","box_pickup":"🏋️ Heavy Box","fishing":"🎣 Fishing","motorcycle":"🏍️ Chopper","canceling_alarm":"🔕 Canceling Alarm","tripwire_trap":"🪤 Tripwire Trap","airdrop":"🪂 Airdrop","loc_outpost":"Military Outpost","loc_tank":"Broken Tank","loc_radio":"Radio Tower","loc_gas_station":"Abandoned Gas Station","loc_air_crash":"Airplane Crash","loc_fishing":"Fishing Spot","loc_parking":"Vehicle Park Junkyard","loc_fena_outpost":"FENA Outpost","loc_traffic_jam":"Traffic Jam","loc_ritual_zone":"Ritual Zone","loc_crash_site":"Crash Site","loc_army_base":"Army Base","loc_ems":"EMS Station","loc_farm":"Farm","loc_camp":"Mini Camp","loc_parking_lot":"Parking Lot","loc_trailer_park":"Trailer Park","loc_supermarket":"Supermarket","item_box":"Box","item_box_transport":"Box (vehicle required)","item_box_generator":"Box (generator required)","item_door_transport":"Vehicle Door","item_door_transport_key":"Vehicle Door (key required)","item_crowbar":"Locked door","generator_radio":"Generator needed for radio","generator_gas":"Generator needed for gas pump","generator_parking":"Generator to lower the container with the crane","item_motorcycle_repair":"Chopper repair","item_radio":"Radio","item_gas_pump":"Gas station","item_corpse_keys":"Key on Corpse","need_corpse_keys":"Need a key on Corpse","item_campfire":"Bonfire","shelf":"Shelf","fishing_pier":"Pier","item_axe":"Collapse","c4_door":"Locked Door (C4)","transistor_loader":"Loader (transistor required)","transistor_door":"Closed door (transistor required)","transistor_door_mb":"Closed door (may require a transistor)","key_door":"Closed door (key required)","loader_box":"Loader Box","item_motorcycle":"Chopper","generator_screech":"Generator for Screech","item_canceling_alarm":"Canceling Alarm","boss_leshen":"Leshen","boss_screech":"Screech","boss_wendigo":"Wendigo","carrot":"Carrot","item_tripwire_trap":"Tripwire Trap","item_airdrop":"Airdrop","frozen_box_transport_persistent":"Box (vehicle required)","frozen_box_transport":"Box (vehicle required)","quarantine_box_transport_persistent":"Box (vehicle required)","quarantine_box_transport":"Box (vehicle required)","greenwood_box_transport_persistent":"Box (vehicle required)","greenwood_box_transport":"Box (vehicle required)","elevation":"Elevation","zombie_phantom":"Frozen Phantom","zombie_fast_biter":"Frozen Fast Biter","zombie_giant":"Frozen Giant","zombie_bloater":"Frozen Bloater","zombie_boar":"Boar","animal_north_deer":"Northern Deer","zombie_phantom_generator":"Frozen Phantom spawns upon generator startup","zombie_fast_biter_generator":"Frozen Fast Biter spawns upon generator startup","zombie_bloater_generator":"Frozen Bloater spawns upon generator startup","zombie_giant_generator":"Frozen Giant spawns upon generator startup","zombie_phantom_or_fast_biter":"Frozen Phantom or Frozen Fast Biter","zombie_phantom_or_bloater":"Frozen Phantom or Frozen Bloater","zombie_bloater_or_fast_biter":"Frozen Bloater or Frozen Fast Biter","zombie_fast_biter_airdrop":"Frozen Fast Biter spawns at the airdrop","zombie_bloater_airdrop":"Frozen Bloater spawns at the airdrop","zombie_giant_airdrop":"Frozen Giant spawns at the airdrop","zombie_phantom_airdrop":"Frozen Phantom spawns at the airdrop","btn_hide":"Hide All","btn_show":"Show All","map_frozen":"Frozen Training Ground","map_quarantine":"Quarantine Zone","map_greenwood":"Greenwood Camping Park","cursor_pos":"Cursor is at: X: {x}, Y: {y}","out_of_map":"Outside the map","loot_example":"Loot example","one":"One","none_or_one":"None or one","of_the_following":"of the following","wiki_source":"🌐 Wiki Source","filters":"Filters","unker_credits":"Specially for the community","success_screenshot_msg":"📸 Great shot! We have automatically copied the interactive link to this map to your clipboard so you can easily share it with friends.","fail_screenshot_msg":"📸 Taking a screenshot? Great idea! But don't forget to copy and share the map link too — it's much more convenient."},
+			crates: {"crate_with_oak_logs":"Crate with Oak Logs","oak_log":"Oak Log","charcoal":"Charcoal","oak_plank":"Oak Plank","crate_with_fur":"Crate with Fur","fur":"Fur","tanned_fur":"Tanned Fur","crate_with_provision_autumn":"Crate with Provision","strong_alcohol":"Strong alcohol","berry":"Berry","raw_meat":"Raw Meat","perch":"Perch","trout":"Trout","pike":"Pike","crate_with_provision_summer":"Crate with Provision","raw_turkey":"Raw Turkey","carp":"Carp","crate_with_provision_winter":"Crate with Provision","northern_berry":"Northern Berry","berry_tincture":"Berry Tincture","salmon":"Salmon","sturgeon":"Sturgeon","crate_with_equipment_autumn":"Crate with Equipment","mini_uzi":"Mini Uzi","colt_python":"Colt Python","winchester":"Winchester","machete":"Machete","katana":"Katana","golf_club":"Golf Club","m16":"M16","ak_47":"AK-47","rare":"Rare","reinforced_beanie":"Reinforced Beanie","reinforced_jacket":"Reinforced Jacket","reinforced_jeans":"Reinforced Jeans","reinforced_boots":"Reinforced Boots","tactical_cap":"Tactical Cap","tactical_body_armor":"Tactical Body Armor","tactical_trousers":"Tactical Trousers","tactical_boots":"Tactical Boots","crate_with_equipment_summer":"Crate with Equipment","glock_17":"Glock 17","crate_with_equipment_winter":"Crate with Equipment","flare_gun":"Flare Gun","vss_vintorez":"VSS Vintorez","hammer":"Hammer","torch":"Torch","fur_beanie":"Fur Beanie","fur_jacket":"Fur Jacket","fur_trousers":"Fur Trousers","fur_boots":"Fur Boots","crate_with_wool":"Crate with Wool","piece_of_wool":"Piece of Wool","woolen_fabric":"Woolen Fabric","crate_with_copper":"Crate with Copper","copper_ore":"Copper Ore","copper_bar":"Copper Bar","crate_with_aluminum":"Crate with Aluminum","aluminum_ore":"Aluminum Ore","aluminium_bar":"Aluminium Bar","crate_with_thermite":"Crate with Thermite","thermite":"Thermite","crate_with_pine_logs":"Crate with Pine Logs","pine_log":"Pine Log","pine_plank":"Pine Plank","crate_with_stone":"Crate with Stone","limestone":"Limestone","crate_with_iron":"Crate with Iron","iron_bar":"Iron Bar","iron_ore":"Iron Ore","iron_plate":"Iron Plate","crate_with_hides":"Crate with Hides","leather":"Leather","animal_rawhide":"Animal Rawhide"},
+			url: "https://ovgamesdev.github.io",
+			baseurl: "/ldoe-scout",
+			lang: "en",
+			buildVer: "1780105311"
+		};
+	</script>
+	<script src="https://ovgamesdev.github.io/ldoe-scout/assets/js/main.js?v=1780105311"></script>
+</body>
+</html>
