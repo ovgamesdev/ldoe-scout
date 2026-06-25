@@ -1,0 +1,562 @@
+[
+    {
+        "x": 44788,
+        "y": 66148,
+        "text": "frozen_box_transport",
+        "group": "box_pickup",
+        "crates": [
+            "crate_with_provision_winter",
+            "crate_with_equipment_winter"
+        ]
+    },
+    {
+        "x": 46726,
+        "y": 63658,
+        "text": "frozen_box_transport_persistent",
+        "group": "box_pickup",
+        "crates": [
+            "crate_with_wool",
+            "crate_with_copper",
+            "crate_with_aluminum",
+            "crate_with_thermite"
+        ]
+    },
+    {
+        "x": 38750,
+        "y": 38294,
+        "text": "frozen_box_transport",
+        "group": "box_pickup",
+        "crates": [
+            "crate_with_provision_winter",
+            "crate_with_equipment_winter"
+        ]
+    },
+    {
+        "x": 37613,
+        "y": 36711,
+        "text": "frozen_box_transport_persistent",
+        "group": "box_pickup",
+        "crates": [
+            "crate_with_wool",
+            "crate_with_copper",
+            "crate_with_aluminum",
+            "crate_with_thermite"
+        ]
+    },
+    {
+        "x": 21975,
+        "y": 33452,
+        "text": "frozen_box_transport",
+        "group": "box_pickup",
+        "crates": [
+            "crate_with_provision_winter",
+            "crate_with_equipment_winter"
+        ]
+    },
+    {
+        "x": 18761,
+        "y": 35143,
+        "text": "frozen_box_transport_persistent",
+        "group": "box_pickup",
+        "crates": [
+            "crate_with_wool",
+            "crate_with_copper",
+            "crate_with_aluminum",
+            "crate_with_thermite"
+        ]
+    },
+    {
+        "x": 63598,
+        "y": 40226,
+        "text": "frozen_box_transport",
+        "group": "box_pickup",
+        "crates": [
+            "crate_with_provision_winter",
+            "crate_with_equipment_winter"
+        ]
+    },
+    {
+        "x": 62573,
+        "y": 36264,
+        "text": "frozen_box_transport_persistent",
+        "group": "box_pickup",
+        "crates": [
+            "crate_with_wool",
+            "crate_with_copper",
+            "crate_with_aluminum",
+            "crate_with_thermite"
+        ]
+    },
+    {
+        "x": 44372,
+        "y": 65648,
+        "text": "item_door_transport",
+        "group": "box",
+        "image": "outpost_1.webp"
+    },
+    {
+        "x": 46480,
+        "y": 64416,
+        "text": "item_box",
+        "group": "box",
+        "image": "outpost_2.webp"
+    },
+    {
+        "x": 45908,
+        "y": 64284,
+        "text": "item_box",
+        "group": "box",
+        "image": "outpost_3.webp"
+    },
+    {
+        "x": 41240,
+        "y": 48608,
+        "text": "item_box",
+        "group": "box",
+        "image": "tank_1.webp"
+    },
+    {
+        "x": 37432,
+        "y": 39096,
+        "text": "item_box",
+        "group": "box",
+        "image": "radio_1.webp"
+    },
+    {
+        "x": 38054,
+        "y": 36557,
+        "text": "item_box",
+        "group": "box",
+        "image": "radio_2.webp"
+    },
+    {
+        "x": 19953,
+        "y": 38423,
+        "text": "item_door_transport",
+        "group": "box",
+        "image": "gas_station_2.webp"
+    },
+    {
+        "x": 23717,
+        "y": 36218,
+        "text": "item_door_transport",
+        "group": "box",
+        "image": "gas_station_1.webp"
+    },
+    {
+        "x": 19786,
+        "y": 32691,
+        "text": "item_door_transport",
+        "group": "box",
+        "image": "gas_station_6.webp"
+    },
+    {
+        "x": 21544,
+        "y": 33440,
+        "text": "item_door_transport",
+        "group": "box",
+        "image": "gas_station_5.webp"
+    },
+    {
+        "x": 19394,
+        "y": 35040,
+        "text": "shelf",
+        "group": "box",
+        "image": "gas_station_3.webp"
+    },
+    {
+        "x": 18440,
+        "y": 34923,
+        "text": "shelf",
+        "group": "box",
+        "image": "gas_station_4.webp"
+    },
+    {
+        "x": 54006,
+        "y": 30611,
+        "text": "item_box",
+        "group": "box",
+        "image": "air_crash_2.webp"
+    },
+    {
+        "x": 52717,
+        "y": 29883,
+        "text": "item_box",
+        "group": "box",
+        "image": "air_crash_1.webp"
+    },
+    {
+        "x": 43817,
+        "y": 21783,
+        "text": "item_box",
+        "group": "box",
+        "image": "fishing_1.webp"
+    },
+    {
+        "x": 44814,
+        "y": 20885,
+        "text": "item_box",
+        "group": "box",
+        "image": "fishing_2.webp"
+    },
+    {
+        "x": 61675,
+        "y": 42082,
+        "text": "item_box",
+        "group": "box",
+        "image": "parking_1.webp"
+    },
+    {
+        "x": 60520,
+        "y": 40073,
+        "text": "item_box",
+        "group": "box",
+        "image": "parking_2.webp"
+    },
+    {
+        "x": 64306,
+        "y": 39629,
+        "text": "item_box",
+        "group": "box",
+        "image": "parking_5.webp"
+    },
+    {
+        "x": 61356,
+        "y": 36932,
+        "text": "item_box",
+        "group": "box",
+        "image": "parking_6.webp"
+    },
+    {
+        "x": 66057,
+        "y": 37182,
+        "text": "item_box",
+        "group": "box",
+        "image": "parking_4.webp"
+    },
+    {
+        "x": 65577,
+        "y": 37145,
+        "text": "item_box",
+        "group": "box",
+        "image": "parking_3.webp"
+    },
+    {
+        "x": 62841,
+        "y": 35163,
+        "text": "item_box",
+        "group": "box",
+        "image": "parking_7.webp"
+    },
+    {
+        "x": 62102,
+        "y": 38900,
+        "text": "loader_box",
+        "group": "box",
+        "image": "parking_9.webp"
+    },
+    {
+        "x": 59282,
+        "y": 41163,
+        "text": "item_box_generator",
+        "group": "box",
+        "image": "parking_8.webp"
+    },
+    {
+        "x": 66460,
+        "y": 41012,
+        "text": "item_airdrop",
+        "group": "airdrop",
+        "image": "parking_airdrop.webp"
+    },
+    {
+        "x": 45712,
+        "y": 67702,
+        "text": "item_airdrop",
+        "group": "airdrop",
+        "image": "outpost_airdrop.webp"
+    },
+    {
+        "x": 22446,
+        "y": 35754,
+        "text": "item_airdrop",
+        "group": "airdrop",
+        "image": "gas_station_airdrop.webp"
+    },
+    {
+        "x": 46982,
+        "y": 64150,
+        "text": "item_crowbar",
+        "group": "crowbar"
+    },
+    {
+        "x": 38263,
+        "y": 37145,
+        "text": "item_crowbar",
+        "group": "crowbar"
+    },
+    {
+        "x": 18686,
+        "y": 34733,
+        "text": "item_crowbar",
+        "group": "crowbar"
+    },
+    {
+        "x": 60090,
+        "y": 38080,
+        "text": "item_crowbar",
+        "group": "crowbar"
+    },
+    {
+        "x": 65274,
+        "y": 36278,
+        "text": "item_crowbar",
+        "group": "crowbar"
+    },
+    {
+        "x": 46750,
+        "y": 64914,
+        "text": "item_campfire",
+        "group": "campfire"
+    },
+    {
+        "x": 36726,
+        "y": 38390,
+        "text": "item_campfire",
+        "group": "campfire"
+    },
+    {
+        "x": 20719,
+        "y": 39175,
+        "text": "item_campfire",
+        "group": "campfire"
+    },
+    {
+        "x": 21108,
+        "y": 34844,
+        "text": "item_campfire",
+        "group": "campfire"
+    },
+    {
+        "x": 20658,
+        "y": 31556,
+        "text": "item_campfire",
+        "group": "campfire"
+    },
+    {
+        "x": 60470,
+        "y": 41618,
+        "text": "item_campfire",
+        "group": "campfire"
+    },
+    {
+        "x": 61607,
+        "y": 37794,
+        "text": "item_campfire",
+        "group": "campfire"
+    },
+    {
+        "x": 65019,
+        "y": 37059,
+        "text": "item_campfire",
+        "group": "campfire"
+    },
+    {
+        "x": 37924,
+        "y": 37996,
+        "text": "generator_radio",
+        "group": "generator"
+    },
+    {
+        "x": 16164,
+        "y": 34950,
+        "text": "generator_gas",
+        "group": "generator"
+    },
+    {
+        "x": 61743,
+        "y": 36345,
+        "text": "generator_parking",
+        "group": "generator"
+    },
+    {
+        "x": 36908,
+        "y": 37710,
+        "text": "item_radio",
+        "group": "radio"
+    },
+    {
+        "x": 21881,
+        "y": 37395,
+        "text": "item_gas_pump",
+        "group": "gas_pump"
+    },
+    {
+        "x": 20700,
+        "y": 36720,
+        "text": "item_gas_pump",
+        "group": "gas_pump"
+    },
+    {
+        "x": 21523,
+        "y": 32800,
+        "text": "item_motorcycle_repair",
+        "group": "motorcycle_repair"
+    },
+    {
+        "x": 20109,
+        "y": 31555,
+        "text": "item_corpse_keys",
+        "group": "corpse_keys"
+    },
+    {
+        "x": 20627,
+        "y": 34153,
+        "text": "item_corpse_keys",
+        "group": "corpse_keys"
+    },
+    {
+        "x": 23236,
+        "y": 33478,
+        "text": "item_corpse_keys",
+        "group": "corpse_keys"
+    },
+    {
+        "x": 16552,
+        "y": 35254,
+        "text": "need_corpse_keys",
+        "group": "corpse_keys"
+    },
+    {
+        "x": 21916,
+        "y": 33984,
+        "text": "item_axe",
+        "group": "axe"
+    },
+    {
+        "x": 63180,
+        "y": 36392,
+        "text": "item_axe",
+        "group": "axe"
+    },
+    {
+        "x": 45810,
+        "y": 20248,
+        "text": "fishing_pier",
+        "group": "fishing"
+    },
+    {
+        "x": 46844,
+        "y": 19412,
+        "text": "fishing_pier",
+        "group": "fishing"
+    },
+    {
+        "x": 47686,
+        "y": 20534,
+        "text": "fishing_pier",
+        "group": "fishing"
+    },
+    {
+        "x": 65531,
+        "y": 37905,
+        "text": "c4_door",
+        "group": "c4"
+    },
+    {
+        "x": 62061,
+        "y": 39383,
+        "text": "transistor_loader",
+        "group": "transistor"
+    },
+    {
+        "x": 61448,
+        "y": 40572,
+        "text": "boss_wendigo",
+        "group": "boss",
+        "icon": "boss_wendigo",
+        "image": "boss_wendigo.webp"
+    },
+    {
+        "x": 48902,
+        "y": 76432,
+        "text": "start",
+        "group": "start"
+    },
+    {
+        "x": 25666,
+        "y": 35628,
+        "text": "start",
+        "group": "start",
+        "angle": 244
+    },
+    {
+        "x": 64436,
+        "y": 43170,
+        "text": "start",
+        "group": "start",
+        "angle": 280
+    },
+    {
+        "x": 48970,
+        "y": 67754,
+        "text": "start",
+        "group": "start",
+        "angle": 313
+    },
+    {
+        "x": 35986,
+        "y": 38880,
+        "text": "start",
+        "group": "start",
+        "angle": 279
+    },
+    {
+        "x": 48560,
+        "y": 21992,
+        "text": "start",
+        "group": "start"
+    },
+    {
+        "x": 45280,
+        "y": 62592,
+        "text": "loc_outpost",
+        "group": "location"
+    },
+    {
+        "x": 40928,
+        "y": 47552,
+        "text": "loc_tank",
+        "group": "location"
+    },
+    {
+        "x": 37363,
+        "y": 35522,
+        "text": "loc_radio",
+        "group": "location"
+    },
+    {
+        "x": 19920,
+        "y": 29936,
+        "text": "loc_gas_station",
+        "group": "location"
+    },
+    {
+        "x": 53056,
+        "y": 28864,
+        "text": "loc_air_crash",
+        "group": "location"
+    },
+    {
+        "x": 45296,
+        "y": 19184,
+        "text": "loc_fishing",
+        "group": "location"
+    },
+    {
+        "x": 62016,
+        "y": 33664,
+        "text": "loc_parking",
+        "group": "location"
+    }
+]
