@@ -385,6 +385,7 @@ map.getPane('locationTitles')!.style.pointerEvents = 'none'
 
 const zonesGroup = L.layerGroup().addTo(map)
 
+// TODO update use bogside-outskirts
 function updateSingleMarkerIcon(marker: L.Marker) {
 	if (marker.options.sourceData?.group === 'location') return
 
@@ -582,7 +583,7 @@ function addMarker(m: MarkerJSON) {
 			baseSize: defaultSize,
 			draggable: false,
 			sourceData: m,
-		}).bindPopup(getMarkerPopupContent(m)).addTo(groups[m.group]!)
+		}).bindPopup(() => getMarkerPopupContent(m)).addTo(groups[m.group]!)
 	}
 
 	marker.on('popupopen', () => {
@@ -790,6 +791,10 @@ function updateMarkersScale() {
 			const marker = layer as L.Marker;
 			if (marker.options.baseFileName) {
 				updateSingleMarkerIcon(marker)
+
+				if (marker.options.sourceData) {
+					marker.setPopupContent(getMarkerPopupContent(marker.options.sourceData!));
+				}
 			}
 		})
 	})
@@ -1374,6 +1379,13 @@ if (isDev) {
 				</select>
 			</div>
 
+			<div style="background:#333; padding:6px; border-radius:4px; margin-bottom:8px; display:flex; flex-direction:column; gap:6px;">
+				<select id="dev-group-select" style="width:100%; background:#222; color:white; border:1px solid #555; padding:4px; border-radius:3px;">
+					${iconOptions}
+				</select>
+				<button id="dev-delete-group" class="dev-draw-btn stop">🗑️ Delete Group</button>
+			</div>
+
 			<div id="dev-marker-props" style="background:#444; padding:8px; border-radius:4px; margin-bottom:8px; display:none; flex-direction:column; gap:6px; border-left: 3px solid #f44336; font-size: 12px;">
 				<div style="display:flex; justify-content:space-between; align-items:center; color:#ddd; font-weight:bold; gap: 5px;">
 					<span>Selected Marker </span>
@@ -1629,6 +1641,8 @@ if (isDev) {
 	const btnUndo = document.getElementById('dev-btn-undo') as HTMLInputElement;
 	const btnFinish = document.getElementById('dev-btn-finish') as HTMLInputElement;
 	const pointCount = document.getElementById('dev-point-count') as HTMLInputElement;
+	const btnDeleteGroup = document.getElementById('dev-delete-group') as HTMLButtonElement;
+	const groupSelect = document.getElementById('dev-group-select') as HTMLSelectElement;
 
 	function updateDrawUI() {
 		btnUndo.disabled = zonePoints.length === 0;
@@ -1672,6 +1686,25 @@ if (isDev) {
 			document.getElementById('map')!.style.cursor = '';
 			updateDrawUI();
 		});
+	};
+
+	btnDeleteGroup.onclick = () => {
+    const selectedGroup = groupSelect.value as GroupsKeys;
+
+    if (!selectedGroup) return;
+
+    const confirmDelete = confirm(`Вы уверены, что хотите полностью удалить группу "${selectedGroup}" с карты?`);
+    if (!confirmDelete) return;
+
+    // Очищаем маркеры внутри группы с помощью встроенного метода Leaflet
+    if (groups[selectedGroup]) {
+			groups[selectedGroup]!.clearLayers(); // Удаляет все маркеры этой группы с карты
+			updateLayersControl();               // Обновляет интерфейс панели управления слоями
+			
+			alert(`Группа "${selectedGroup}" успешно очищена.`);
+    } else {
+			alert(`Группа "${selectedGroup}" пуста или еще не была создана.`);
+    }
 	};
 
 }

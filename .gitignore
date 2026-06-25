@@ -8,3 +8,4 @@ node_modules
 package-lock.json
 assets
 fandom_cache.json
+.vscode
