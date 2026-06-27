@@ -290,6 +290,40 @@
         ]
     },
     {
+        "x": 11636,
+        "y": 40084,
+        "text": "greenwood_box_transport_persistent",
+        "group": "box_pickup",
+        "crates": [
+            "crate_with_provision_summer",
+            "crate_with_equipment_summer"
+        ]
+    },
+    {
+        "x": 9722,
+        "y": 38654,
+        "text": "greenwood_box_transport_persistent",
+        "group": "box_pickup",
+        "crates": [
+            "crate_with_pine_logs",
+            "crate_with_stone",
+            "crate_with_iron",
+            "crate_with_hides"
+        ]
+    },
+    {
+        "x": 32558,
+        "y": 11593,
+        "text": "greenwood_box_transport_persistent",
+        "group": "box_pickup",
+        "crates": [
+            "crate_with_pine_logs",
+            "crate_with_stone",
+            "crate_with_iron",
+            "crate_with_hides"
+        ]
+    },
+    {
         "x": 36245,
         "y": 52570,
         "text": "item_box",
@@ -466,11 +500,11 @@
         "angle": 232
     },
     {
-        "x": 16262,
-        "y": 40438,
+        "x": 15498,
+        "y": 42850,
         "text": "start",
         "group": "start",
-        "angle": 186
+        "angle": 292
     },
     {
         "x": 35408,
